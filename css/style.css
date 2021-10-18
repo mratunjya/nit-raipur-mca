@@ -1,0 +1,22 @@
+.body {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.card {
+    border: 1px solid black;
+    box-sizing: border-box;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin: 20px;
+    width: 12%;
+    min-width: 150px;
+    text-align: center;
+    color: #333333;
+    font-size: larger;
+}
+
+.footer {
+    position: absolute;
+    bottom: 20px;
+}

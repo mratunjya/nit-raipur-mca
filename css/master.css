@@ -1,0 +1,109 @@
+@import url("https://use.typekit.net/brz1brw.css");
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    color: #191919;
+    font-family: 'Lato', sans-serif;
+}
+
+*::selection {
+    background-color: RGBA(0,150,136,0.8);
+    color: white;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.no-deco {
+    text-decoration: none;
+}
+
+.block {
+    display: block;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.clear {
+    clear: both;
+}
+
+.gry-line {
+    border: 1px solid grey;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.flex {
+    display: flex;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.o-40 {
+    opacity: 40%;
+}
+
+.space-around {
+    justify-content: space-around;
+}
+
+.flex-direction-column {
+    flex-direction: column;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.m-t-0 {
+    margin-top: 0 !important;
+}
+
+.m-t-68 {
+    margin-top: 68px !important;
+}
+
+.o-60 {
+    opacity: 60%;
+}
+
+.o-20 {
+    opacity: 20%;
+}
+
+.display-at-768 {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+.footer {
+    text-align: center;
+    font-size: 2.5vw;
+    color: #1f1c1c;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin-top: 100px;
+}

@@ -1,0 +1,9 @@
+.cl-al-nb > div {
+    max-width: 40%;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+}
+
+.cl-al-nb li {
+    margin-top: 5px;
+}
