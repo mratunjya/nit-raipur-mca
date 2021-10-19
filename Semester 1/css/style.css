@@ -6,3 +6,10 @@
 .cl-al-nb li {
     margin-top: 7px;
 }
+
+.class-links, .attendance-links, .notice-board {
+    border: 1px solid black;
+    border-radius: 8px;
+    box-sizing: border-box;
+    padding: 10px 15px;
+} 
