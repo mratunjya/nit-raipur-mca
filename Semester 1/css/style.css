@@ -13,10 +13,10 @@ body {
 .cl-al-nb > div {
     max-width: 40%;
     word-wrap: break-word;
-    max-height: 400px;
+    max-height: 90vh;
     height: fit-content;
     overflow-y: auto;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.8); 
 }
 
 .cl-al-nb > div::-webkit-scrollbar {
@@ -24,24 +24,28 @@ body {
 }
 
 .cl-al-nb > div::-webkit-scrollbar-track {
-    background-color: rgba(174, 174, 174, 0.14);
-    border-radius: 2px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 100%;
 }
 
 .cl-al-nb > div::-webkit-scrollbar-thumb {
-    background-color: rgba(10, 10, 10, 0.4);
-    border-radius: 2px;
+    background-color: #2b2b2b;
+    border-radius: 80%;
 }
 
 .cl-al-nb li {
     margin-top: 7px;
 }
 
-.class-links, .attendance-links, .notice-board, .Books   {
-    border: 1px solid black;
+.class-links, .attendance-links, .notice-board, .Books, .Important-msg   {
+    border: 1px solid #2b2b2b;
     border-radius: 8px;
     box-sizing: border-box;
     padding: 20px 25px;
+}
+
+.Books, .Important-msg {
+    max-width: 48% !important;
 }
 
 .background {
