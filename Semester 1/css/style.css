@@ -146,6 +146,10 @@ body {
     display: block;
 }
 
+.no-overflow {
+    overflow: hidden;
+}
+
 .footer {
     margin: 0;
     padding: 40px 0 50px;
