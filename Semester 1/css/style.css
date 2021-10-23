@@ -16,7 +16,7 @@ body {
     max-height: 90vh;
     height: fit-content;
     overflow-y: auto;
-    background-color: rgba(255, 255, 255, 0.8); 
+    background-color: rgba(255, 255, 255, 0.9); 
 }
 
 .cl-al-nb > div::-webkit-scrollbar {
@@ -24,7 +24,7 @@ body {
 }
 
 .cl-al-nb > div::-webkit-scrollbar-track {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.9);
     border-radius: 100%;
 }
 
@@ -49,12 +49,101 @@ body {
 }
 
 .background {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url("/semester 1/jpg/background.jpg");
+    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("/semester 1/jpg/background.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     padding-bottom: 50px;
+}
+
+.syllabus-btn {
+    background-image: -webkit-linear-gradient(#cb2d3e,#ef473a);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+}
+
+.syllabus {
+    background-color: #282A35;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: none;
+    overflow-y: auto;
+    max-height: 100vh;
+    position: fixed;
+}
+
+.syllabus::-webkit-scrollbar {
+    width: 12px;
+}
+
+.syllabus::-webkit-scrollbar-track {
+    background-color: #282A35;
+}
+
+.syllabus > button {
+    background-color: #e9e9ea;
+    border-radius: 8px;
+    border: 2px solid #b53f51;
+    font-size: 20px;
+    padding: 12px;
+    position: fixed;
+    right: 30px;
+    top: 12px;
+}
+
+.syllabus > button * {
+    color: #b53f51;
+}
+
+.syllabus-content > .flex > div {
+    background-color: #282A35;
+    margin: 20px 0;
+}
+
+.syllabus-content > .flex > div:first-of-type {
+    width: 40%;
+}
+
+.syllabus-content > .flex > div:last-of-type {
+    width: 60%;
+    height: 100vh;
+    overflow-y: auto;
+    padding-right: 50px;
+    box-sizing: border-box;
+}
+
+.syllabus-content > .flex > div:last-of-type::-webkit-scrollbar {
+    width: 12px;
+}
+
+.syllabus-content > .flex > div:last-of-type::-webkit-scrollbar-track {
+    background-color: #282A35;
+}
+
+.syllabus-content > .flex > div:last-of-type::-webkit-scrollbar-thumb {
+    background-color: #b53f51;
+    border-radius: 6px;
+}
+
+.syllabus-content > .flex > div > h1 {
+    margin-top: 20vh;
+    text-align: center;
+    color: #e9e9ea;
+    font-size: 52px;
+}
+
+.syllabus-content img {
+    width: 98%;
+    margin-right: 2%;
+}
+
+.show {
+    display: block;
 }
 
 .footer {
