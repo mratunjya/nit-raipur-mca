@@ -16,7 +16,7 @@
     <header class="animate__animated animate__rubberBand header">
         <h1 class="text-center"><a href="../" class="no-deco">NIT Raipur MCA 2021 - 2024</a> <br>Semester I - <span onclick="syllabus_show()" class="syllabus-btn">#Syllabus (Click Me!)</span></h1>
     </header>
-
+    <button class="time-table-btn" onclick="time_table_show()">Time Table</button>
     <hr class="gry-line animate__animated animate__fadeInDown">
 
     <section class="background center animate__animated animate__bounceIn">
@@ -199,7 +199,16 @@
         </div>
     </section>
 
+    <section class="time-table animate__animated animate__slideInLeft" id="time-table">
+        <button onclick="time_table_hide()"><i class="fas fa-times"></i></button>
+        <div class="time-table-content flex-direction-column flex">
+           <div>
+                <img src="jpg/MCA Time Table Sem 1 2021.jpeg" alt="Time Table" srcset="">
+           </div>
+        </div>
+    </section>
 
+    <script src="JavaScript/time-table.js"></script>
 
 
 

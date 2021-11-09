@@ -38,4 +38,17 @@
         margin: 0;
         padding: 0;
     }
+
+    .time-table-btn {
+        top: 20vh;
+        opacity: 96%;
+    }
+
+    .time-table img {
+        margin-top: 80px;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
 }

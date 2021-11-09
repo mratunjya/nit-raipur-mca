@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap');
+
 body {
     background-image: linear-gradient(to top, #fddb92 0%, #d1fdff 100%);
 }
@@ -142,10 +144,6 @@ body {
     margin-right: 2%;
 }
 
-.show {
-    display: block;
-}
-
 .no-overflow {
     overflow: hidden;
 }
@@ -154,4 +152,71 @@ body {
     margin: 0;
     padding: 40px 0 50px;
     background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+}
+
+.time-table-btn {
+    background-color: #3cdc39;
+    color: #ebfbeb;
+    padding: 16px 24px;
+    font-size: 24px;
+    border-radius: 0 20px 20px 0;
+    top: 10vh;
+    left: 0;
+    display: block;
+    position: fixed;
+    z-index: 2;
+    box-shadow: 0px 0px 8px RGBA(6,22,5,0.4);
+    border: 4px solid #36c633;
+    border-left: none;
+    font-weight: bold;
+    font-family: 'Mochiy Pop P One', sans-serif;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+.time-table {
+    background-color: #051305;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    display: none;
+    overflow-y: auto;
+    max-height: 100vh;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+}
+
+.time-table::-webkit-scrollbar {
+    width: 12px;
+}
+
+.time-table::-webkit-scrollbar-track {
+    background-color: #051305;
+}
+
+.time-table::-webkit-scrollbar-thumb {
+    background-color: #c63336;
+    border-radius: 6px;
+}
+
+.time-table > button {
+    background-color: #e9e9ea;
+    border-radius: 8px;
+    border: 2px solid #c63336;
+    font-size: 20px;
+    padding: 12px;
+    position: fixed;
+    right: 30px;
+    top: 12px;
+    z-index: 4;
+}
+
+.time-table > button * {
+    color: #c63336;
+}
+
+.show {
+    display: block;
 }
