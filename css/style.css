@@ -1,5 +1,8 @@
 body {
-    background-image: linear-gradient(to top, #fddb92 0%, #d1fdff 100%);
+    background-image: linear-gradient(to top, rgba(253,219,146,0.5) 0%, rgba(209,253,255,0.5) 100%), url("https://images.pexels.com/photos/159866/books-book-pages-read-literature-159866.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 .card {
@@ -26,4 +29,5 @@ body {
 .footer {
     position: absolute;
     bottom: 20px;
+    text-shadow: -1px -1px 4px #b8cbb8, 1px 1px 1px #e4afcb;
 }
