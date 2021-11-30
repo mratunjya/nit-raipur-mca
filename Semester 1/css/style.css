@@ -1,15 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap');
 
 body {
-    background-image: linear-gradient(to top, #fddb92 0%, #d1fdff 100%);
+    /* background-image: linear-gradient(to top, #fddb92 0%, #d1fdff 100%); */
+    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("/Semester 1/jpg/background.jpg");
 }
 
 .header {
-    padding: 20px 0;
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
-    background-color: rgba(244, 67, 54, 0.2);
+    padding: 5px 0;
+    background-color: rgba(0, 0, 0, 0.767);
+    border-radius: 0px 0px 24px 24px;
+    -webkit-border-radius: 0px 0px 24px 24px;
+    -moz-border-radius: 0px 0px 24px 24px;
+    -ms-border-radius: 0px 0px 24px 24px;
+    -o-border-radius: 0px 0px 24px 24px;
+}
+
+.header * {
+    color: #fff;
+    text-shadow: 0px 0px 2px green, 2px 2px 4px #fff;
 }
 
 .cl-al-nb > div {
@@ -18,21 +26,24 @@ body {
     max-height: 90vh;
     height: fit-content;
     overflow-y: auto;
-    background-color: rgba(255, 255, 255, 0.9); 
+    background-color: RGBA(254,253,252,0.9);
 }
 
 .cl-al-nb > div::-webkit-scrollbar {
-    width: 4px;
+    width: 6px;
 }
 
 .cl-al-nb > div::-webkit-scrollbar-track {
-    background-color: rgba(255, 255, 255, 0.9);
-    border-radius: 100%;
+    background-color: transparent;
 }
 
 .cl-al-nb > div::-webkit-scrollbar-thumb {
     background-color: #2b2b2b;
-    border-radius: 80%;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
 }
 
 .cl-al-nb li {
@@ -40,10 +51,14 @@ body {
 }
 
 .class-links, .attendance-links, .notice-board, .Books, .Important-msg   {
-    border: 1px solid #2b2b2b;
-    border-radius: 8px;
+    border: 2px solid #180605;
+    border-radius: 30px;
     box-sizing: border-box;
     padding: 20px 25px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
 }
 
 .notice-board {
@@ -55,7 +70,7 @@ body {
 }
 
 .background {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("/semester 1/jpg/background.jpg");
+    /* background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("/Semester 1/jpg/background.jpg"); */
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -64,11 +79,9 @@ body {
 }
 
 .syllabus-btn {
-    background-image: -webkit-linear-gradient(#cb2d3e,#ef473a);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     cursor: pointer;
+    color: #fdecea;
+    text-shadow: 0px 0px 2px red, 2px 2px 4px #fff;
 }
 
 .syllabus {
