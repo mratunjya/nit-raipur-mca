@@ -19,15 +19,16 @@
         <div><img src="../gif/loader.gif" alt="" srcset=""></div>
     </div>
     <header class="animate__animated animate__rubberBand header">
-        <h1 class="text-center"><a href="../" class="no-deco">NIT Raipur MCA 2021 - 2024</a> <br>Semester I - <span onclick="syllabus_show()" class="syllabus-btn">#Syllabus (Click Me!)</span></h1>
+        <h1 class="text-center"><a href="../" class="no-deco">NIT Raipur MCA 2021 - 2024</a>&nbsp;&nbsp;&nbsp;Semester I</h1>
     </header>
     <a href="#time-table-btn"><button class="time-table-btn animate__animated animate__fadeIn" id="time-table-btn" onclick="time_table_show()">Time Table</button></a>
+    <a href="#syllabus-btn"><button class="syllabus-btn animate__animated animate__fadeIn" id="syllabus-btn" onclick="syllabus_show()">Syllabus</button></a>
     <!--<hr class="gry-line animate__animated animate__fadeInDown">-->
 
     <section class="background center animate__animated animate__bounceIn">
         <div class="flex space-between flex-wrap cl-al-nb w-95-cent center">
             <div class="notice-board m-t-40" id="notice-board">
-                <h2 class="card-h2"><a href="#notice-board">Notice Board</a></h2>
+                <h2 class="card-h2"><a href="#notice-board" onclick="scroll_minus20()">Notice Board</a></h2>
                 <ol class="m-l-40">
                     <li><a href="PDF/MCQ 2&3.pdf" target="_blank">MCQ 2&3</a></li>
                     <li><a href="PDF/English Students List.pdf" target="_blank">English Student List</a></li>
@@ -37,7 +38,7 @@
             </div>
             <div class="class-links m-t-40" id="class-links">
                 <div>
-                    <h2 class="card-h2"><a href="#class-links">Class Links</a></h2>
+                    <h2 class="card-h2"><a href="#class-links" onclick="scroll_minus20()">Class Links</a></h2>
                     <div class="os">
                         <h3>Operating System:</h3>
                         <ol class="m-l-40">
@@ -80,7 +81,7 @@
                 </div>
             </div>
             <div class="attendance-links m-t-40" id="attendance-links">
-                <h2 class="card-h2"><a href="#attendance-links">Attendance Links</a></h2>
+                <h2 class="card-h2"><a href="#attendance-links" onclick="scroll_minus20()">Attendance Links</a></h2>
                 <div class="os">
                     <h3>Operating System:</h3>
                     <ol class="m-l-40">
@@ -120,7 +121,7 @@
                 </div>
             </div>
             <div class="Books m-t-40" id="Books">
-                <h2 class="card-h2"><a href="#Books">Books</a></h2>
+                <h2 class="card-h2"><a href="#Books" onclick="scroll_minus20()">Books</a></h2>
                 <div class="os">
                     <h3>Operating System:</h3>
                     <ol class="m-l-40">
@@ -168,7 +169,7 @@
                 </div>
             </div>
             <div class="Important-msg m-t-40" id="Important-msg">
-                <h2 class="card-h2"><a href="#Important-msg">Important Messages</a></h2>
+                <h2 class="card-h2"><a href="#Important-msg" onclick="scroll_minus20()">Important Messages</a></h2>
                 <div class="os">
                     <h3>Topic: Research Paper</h3>
                     <div>
@@ -224,7 +225,7 @@
 
 
 
-    <section class="syllabus animate__animated animate__slideInDown" id="syllabus">
+    <section class="syllabus animate__animated animate__slideInRight" id="syllabus">
         <button onclick="syllabus_hide()"><i class="fas fa-times"></i></button>
         <div class="syllabus-content flex-direction-column flex">
             <div class="flex flex-wrap ">
@@ -269,5 +270,9 @@
     <footer class="footer animate__animated animate__fadeInUp">
         <p><a href="https://www.linkedin.com/in/mratunjyashankhdhar/" target="_blank" style="text-decoration: none; font-family: 'Major Mono Display', monospace;">Made with <img src="../svg/heart-svg.svg" width="2.5%"> by Mratunjya Shankhdhar</a></p>
     </footer>
+
+
+    <script src="../JavaScript/script.js"></script>
+    <script src="JavaScript/onload.js"></script>
 </body>
 </html>

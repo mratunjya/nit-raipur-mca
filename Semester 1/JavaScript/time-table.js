@@ -2,13 +2,21 @@ let time_table = document.getElementById("time-table");
 body = document.getElementsByTagName("body")[0];
 
 function time_table_show() {
-    time_table.classList.toggle("show");
+    if (!time_table.classList.contains("show")) {
+        time_table.classList.toggle("show");
+    }
     body.classList.toggle("no-overflow");
+    document.querySelector(".time-table-btn").style.display = "none";
+    document.querySelector(".syllabus-btn").style.display = "block";
+    if (syllabus.classList.contains("show")) {
+        syllabus.classList.toggle("show");
+    }
 }
 
 function time_table_hide() {
     time_table.classList.toggle("show");
     body.classList.toggle("no-overflow");
+    document.querySelector(".time-table-btn").style.display = "block";
 }
 
 function time_table_btn() {
