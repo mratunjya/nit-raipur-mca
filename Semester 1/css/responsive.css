@@ -40,8 +40,11 @@
     }
 
     .time-table-btn {
-        top: 20vh;
-        opacity: 96%;
+        width: 100px;
+        padding: 4px;
+        top: 30vh;
+        text-align: center;
+        line-height: 30px;
     }
 
     .time-table img {
