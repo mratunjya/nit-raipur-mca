@@ -1,6 +1,6 @@
 @import url("https://use.typekit.net/brz1brw.css");
 @import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -9,7 +9,7 @@
 }
 
 *::selection {
-    background-color: RGBA(0,150,136,0.8);
+    background-color: RGBA(0, 150, 136, 0.8);
     color: white;
 }
 
@@ -23,7 +23,6 @@ html::-webkit-scrollbar-track {
     outline: 2px solid #100204;
     /*a51c30*/
 }
-
 
 html::-webkit-scrollbar-thumb {
     background: #C9FFBF;
@@ -151,4 +150,7 @@ body {
     align-items: center;
     z-index: 100000;
     overflow: hidden;
+    background-image: url("/gif/loader.gif");
+    background-repeat: no-repeat;
+    background-position: center;
 }

@@ -1,5 +1,5 @@
-function scroll_minus20() {
+function scroll_minus70() {
     setTimeout(function() {
-        window.scrollBy(0, -20);
+        window.scrollBy(0, -70);
     }, 500);
 }

@@ -5,7 +5,9 @@ function time_table_show() {
     if (!time_table.classList.contains("show")) {
         time_table.classList.toggle("show");
     }
-    body.classList.toggle("no-overflow");
+    if (!body.classList.contains("no-overflow")) {
+        body.classList.toggle("no-overflow");
+    }
     document.querySelector(".time-table-btn").style.display = "none";
     document.querySelector(".syllabus-btn").style.display = "block";
     if (syllabus.classList.contains("show")) {
@@ -29,5 +31,7 @@ function time_table_btn() {
 window.addEventListener("scroll", time_table_btn);
 document.querySelector(".class-links").addEventListener("scroll", time_table_btn);
 document.querySelector(".attendance-links").addEventListener("scroll", time_table_btn);
+document.querySelector(".books").addEventListener("scroll", time_table_btn);
+document.querySelector(".Important-msg").addEventListener("scroll", time_table_btn);
 document.querySelector(".books").addEventListener("scroll", time_table_btn);
 document.querySelector(".Important-msg").addEventListener("scroll", time_table_btn);

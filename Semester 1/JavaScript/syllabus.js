@@ -1,11 +1,13 @@
 let syllabus = document.getElementById("syllabus");
 let body = document.getElementsByTagName("body")[0];
 
-function syllabus_show () {
+function syllabus_show() {
     if (!syllabus.classList.contains("show")) {
         syllabus.classList.toggle("show");
     }
-    body.classList.toggle("no-overflow");
+    if (!body.classList.contains("no-overflow")) {
+        body.classList.toggle("no-overflow");
+    }
     document.querySelector(".syllabus-btn").style.display = "none";
     document.querySelector(".time-table-btn").style.display = "block";
     if (time_table.classList.contains("show")) {
@@ -13,7 +15,7 @@ function syllabus_show () {
     }
 }
 
-function syllabus_hide () {
+function syllabus_hide() {
     syllabus.classList.toggle("show");
     body.classList.toggle("no-overflow");
     document.querySelector(".syllabus-btn").style.display = "block";
