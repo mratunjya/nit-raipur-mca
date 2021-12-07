@@ -1,8 +1,7 @@
 body {
-    background-image: url("https://images.pexels.com/photos/355948/pexels-photo-355948.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    background-image: url("../jpg/background.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    background-attachment: fixed;
 }
 
 header h1 {
