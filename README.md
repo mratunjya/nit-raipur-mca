@@ -1,1 +1,1 @@
-# nit-aipur-mca
+# nit-Raipur-mca
