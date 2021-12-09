@@ -212,8 +212,8 @@ body {
     border-radius: 8px;
     border: 2px solid #b53f51;
     font-size: 20px;
-    position: fixed;
-    right: 30px;
+    position: sticky;
+    left: calc(100% - 30px);
     top: 12px;
     cursor: pointer;
     height: 40px;
@@ -350,8 +350,8 @@ body {
     border-radius: 8px;
     border: 2px solid #c63336;
     font-size: 20px;
-    position: fixed;
-    right: 30px;
+    position: sticky;
+    left: calc(100% - 30px);
     top: 12px;
     z-index: 4;
     cursor: pointer;
