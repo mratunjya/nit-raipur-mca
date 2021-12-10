@@ -1,5 +1,11 @@
 function scroll_minus70() {
     setTimeout(function() {
-        window.scrollBy(0, -70);
+        if (window.innerWidth > 768) {
+            scroll = -70;
+        }
+        else {
+            scroll = -120;
+        }
+        window.scrollBy(0, scroll);
     }, 500);
 }
