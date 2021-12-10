@@ -1,5 +1,5 @@
 @media only screen and (max-width: 768px) {
-    .cl-al-nb > div {
+    .cl-al-nb>div {
         width: 100%;
         max-width: 100% !important;
         max-height: fit-content;
@@ -12,9 +12,13 @@
         -moz-border-radius: 10px;
         -ms-border-radius: 10px;
         -o-border-radius: 10px;
-}
+    }
 
-    .syllabus > button {
+    .card-h2 {
+        width: calc(100% + 50px);
+    }
+
+    .syllabus>button {
         right: 12px;
     }
 
@@ -24,19 +28,19 @@
         width: 100%;
     }
 
-    .syllabus-content > .flex {
+    .syllabus-content>.flex {
         flex-direction: column;
         margin: 0 auto 20px;
     }
 
-    .syllabus-content > .flex > div {
+    .syllabus-content>.flex>div {
         width: 95% !important;
         margin: auto;
         padding: 0 !important;
         height: fit-content !important;
     }
 
-    .syllabus-content > .flex > div > h1 {
+    .syllabus-content>.flex>div>h1 {
         margin-top: 10vh;
         margin-bottom: 20px;
         font-size: 36px;
