@@ -25,7 +25,7 @@ function syllabus_btn() {
     document.querySelector(".syllabus-btn").style.display = "none";
     setTimeout(function() {
         document.querySelector(".syllabus-btn").style.display = "block";
-    }, 250);
+    }, 500);
 }
 
 window.addEventListener("scroll", syllabus_btn);

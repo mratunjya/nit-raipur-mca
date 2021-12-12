@@ -97,6 +97,24 @@ body {
     width: 100% !important;
 }
 
+.notice-board li:first-of-type > a {
+    position: relative;
+}
+
+.notice-board li:first-of-type > a::after {
+    content: url(/svg/new-svg.svg);
+    display: block;
+    width: 20px;
+    min-width: 20px;
+    max-width: 20px;
+    height: 20px;
+    min-height: 20px;
+    max-height: 20px;
+    bottom: 0;
+    right: -30px;
+    position: absolute;
+}
+
 .Books,
 .Important-msg {
     max-width: 48% !important;
@@ -129,6 +147,7 @@ body {
 .card-h2 a {
     display: block;
     text-decoration: none;
+    font-weight: 800;
 }
 
 .card-h2 a:after {
@@ -213,7 +232,7 @@ body {
     border: 2px solid #b53f51;
     font-size: 20px;
     position: sticky;
-    left: calc(100% - 30px);
+    left: calc(100% - 50px);
     top: 12px;
     cursor: pointer;
     height: 40px;
@@ -332,6 +351,10 @@ body {
     height: 100vh;
 }
 
+.time-table img {
+    width: 100%;
+}
+
 .time-table::-webkit-scrollbar {
     width: 12px;
 }
@@ -351,8 +374,8 @@ body {
     border: 2px solid #c63336;
     font-size: 20px;
     position: sticky;
-    left: calc(100% - 30px);
     top: 12px;
+    left: calc(100% - 50px);
     z-index: 4;
     cursor: pointer;
     width: 40px;

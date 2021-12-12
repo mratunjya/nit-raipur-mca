@@ -25,7 +25,7 @@ function time_table_btn() {
     document.querySelector(".time-table-btn").style.display = "none";
     setTimeout(function() {
         document.querySelector(".time-table-btn").style.display = "block";
-    }, 250);
+    }, 500);
 }
 
 window.addEventListener("scroll", time_table_btn);
