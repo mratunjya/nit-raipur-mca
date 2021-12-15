@@ -1,4 +1,13 @@
 @media only screen and (max-width: 768px) {
+    .shellScripting {
+        box-sizing: border-box;
+        padding: 10px 0 0 0;
+    }
+
+    .shellScripting h2 {
+        font-weight: 300;
+    }
+
     .cl-al-nb>div {
         width: 100%;
         max-width: 100% !important;
