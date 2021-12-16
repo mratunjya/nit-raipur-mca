@@ -1,0 +1,16 @@
+body {
+    overflow: hidden !important;
+    background-image: none;
+    background-color: #000;
+}
+
+iframe {
+    min-width: 100%;
+    max-width: 100%;
+    width: 100%;
+    border: none;
+    margin: 0;
+    padding: 0;
+    height: calc(100% - 55px);
+    background-color: #fff;
+}
