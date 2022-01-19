@@ -1,0 +1,83 @@
+<html lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="/JavaScript/loader.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script src="https://kit.fontawesome.com/952d5d526e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/margin.css">
+    <link rel="stylesheet" href="/css/width.css">
+    <link rel="stylesheet" href="/css/master.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>C Programming Viva Voce - NIT Raipur MCA 2021 - 2024</title>
+</head>
+<body>
+    <div class="loader"></div>
+
+    <header class="animate__animated animate__rubberBand header">
+        <h1 class="text-center"><a href="../../" class="no-deco">NIT Raipur MCA 2021 - 2024</a>&nbsp;&nbsp;&nbsp;Semester I</h1>
+    </header>
+
+    <div class="scroll-bar">
+        <div class="all-question-answer">
+            <div class="flex question-answer flex-direction-column">
+                <div class="flex flex-direction-column">
+                    <div class="flex align-items-center">
+                        <h3></h3>
+                        <h3 class="question m-l-12">Why we use # in C Programming?</h3>
+                    </div>
+                    <div class="flex align-items-center m-t-4">
+                        <h3 class="Ans"></h3>
+                        <p class="answer m-l-8"># is a pre-processor directive. It is used to distinguish lines which need preprocessing before actual compilation begins.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flex question-answer flex-direction-column">
+                <div class="flex flex-direction-column">
+                    <div class="flex align-items-center">
+                        <h3></h3>
+                        <h3 class="question m-l-12">Use of include</h3>
+                    </div>
+                    <div class="flex align-items-center m-t-4">
+                        <h3 class="Ans"></h3>
+                        <p class="answer m-l-8">The #include preprocessor directive is used to paste code of given file into current file. It is used include system-defined and user-defined header files. If included file is not found, compiler renders error.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        window.onload = function() {
+            all_h3 = document.getElementsByTagName("h3");
+            let c = 1;
+            for(i = 0; i < all_h3.length; i = i + 3) {
+                if (i % 3 == 0) {
+                    all_h3[i].innerHTML = `Q${c}.`;
+                    c++;
+                }
+            }
+
+            all_ans = document.getElementsByClassName("Ans");
+
+            for (i = 0; i < all_ans.length; i++) {
+                all_ans[i].innerHTML = `Ans.`;
+            }
+
+            question_answer = {
+                
+            }
+
+            all_question = document.getElementsByClassName("question");
+
+            for (i = 0; i < all_question.length; i++) {
+                all_question[i].innerHTML = `<a href="../../questions/semester1/viva-voce/q${i+1}.html">${all_question[i].innerHTML}</a>`;
+            }
+        }
+    </script>
+</body>
+</html>
