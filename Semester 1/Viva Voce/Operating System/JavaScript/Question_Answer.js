@@ -186,7 +186,7 @@ const question_answer =
                         <b>Waiting time:</b> Waiting time is the amount of time a process has been waiting in the ready queue.
                     </li>
                     <li>
-                        <b>Response time:</b> amount of time it takes from when a request was submitted until the first response is produced, not output (for time-sharing environment).
+                        <b>Response time:</b> Amount of time it takes from when a request was submitted until the first response is produced, not output (for time-sharing environment).
                     </li>
                 </ul>
             `
