@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="../../css/responsive.css">
     <link rel="stylesheet" href="css/style.css">
     <title>C Programming Viva Voce - NIT Raipur MCA 2021 - 2024</title>
+    <script type="module" src="JavaScript/master.js"></script>
 </head>
 <body>
     <div class="loader"></div>
@@ -23,61 +24,7 @@
     </header>
 
     <div class="scroll-bar">
-        <div class="all-question-answer">
-            <div class="flex question-answer flex-direction-column">
-                <div class="flex flex-direction-column">
-                    <div class="flex align-items-center">
-                        <h3></h3>
-                        <h3 class="question m-l-12">Why we use # in C Programming?</h3>
-                    </div>
-                    <div class="flex align-items-center m-t-4">
-                        <h3 class="Ans"></h3>
-                        <p class="answer m-l-8"># is a pre-processor directive. It is used to distinguish lines which need preprocessing before actual compilation begins.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="flex question-answer flex-direction-column">
-                <div class="flex flex-direction-column">
-                    <div class="flex align-items-center">
-                        <h3></h3>
-                        <h3 class="question m-l-12">Use of include</h3>
-                    </div>
-                    <div class="flex align-items-center m-t-4">
-                        <h3 class="Ans"></h3>
-                        <p class="answer m-l-8">The #include preprocessor directive is used to paste code of given file into current file. It is used include system-defined and user-defined header files. If included file is not found, compiler renders error.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <div class="all-question-answer"></div>
     </div>
-
-    <script>
-        window.onload = function() {
-            all_h3 = document.getElementsByTagName("h3");
-            let c = 1;
-            for(i = 0; i < all_h3.length; i = i + 3) {
-                if (i % 3 == 0) {
-                    all_h3[i].innerHTML = `Q${c}.`;
-                    c++;
-                }
-            }
-
-            all_ans = document.getElementsByClassName("Ans");
-
-            for (i = 0; i < all_ans.length; i++) {
-                all_ans[i].innerHTML = `Ans.`;
-            }
-
-            question_answer = {
-                
-            }
-
-            all_question = document.getElementsByClassName("question");
-
-            for (i = 0; i < all_question.length; i++) {
-                all_question[i].innerHTML = `<a href="../../questions/semester1/viva-voce/q${i+1}.html">${all_question[i].innerHTML}</a>`;
-            }
-        }
-    </script>
 </body>
 </html>

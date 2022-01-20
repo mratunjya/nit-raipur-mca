@@ -50,6 +50,7 @@ p {
 .all-question-answer {
     overflow: auto;
     max-height: 100%;
+    padding-right: 10px;
 }
 
 .all-question-answer::-webkit-scrollbar {
@@ -80,4 +81,8 @@ p {
 
 .question-answer:first-of-type {
     margin-top: 0;
+}
+
+.Ans {
+    align-self: start;
 }
