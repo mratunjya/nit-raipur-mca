@@ -152,19 +152,6 @@ const question_answer =
             `
         },
         {
-            question: "hat is the concept of demand paging? What is Page Fault?",
-            answer: `
-                <ul>
-                    <li>
-                        <b>Demand paging:</b> Demand paging specifies that if an area of memory is not currently being used, it is swapped to disk to make room for an application's need.
-                    </li>
-                    <li>
-                        <b>Page Fault:</b> A page fault occurs when a program attempts to access a block of memory that is not stored in the physical memory, or RAM.
-                    </li>
-                </ul>
-            `
-        },
-        {
             question: "What is Cache Memory?",
             answer: `Cache memory is an extremely fast memory type that acts as a buffer between RAM and the  CPU. It holds frequently requested data and instructions so that they are immediately available to the CPU when needed. Cache memory is used to reduce the average time to access data from the Main memory.`
         },
@@ -225,7 +212,7 @@ const question_answer =
                                 <b>Ready:</b> A process is waiting to be assigned to the processor.
                             </li>
                             <li>
-                                <b>Running:</b> A process is waiting for some event occur.
+                                <b>Waiting:</b> A process is waiting for some event occur.
                             </li>
                             <li>
                                 <b>Running:</b> A process instruction is being executed.
