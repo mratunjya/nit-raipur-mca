@@ -89,10 +89,10 @@ const question_answer =
             answer: `
                 <ul>
                     <li>
-                        <b>MVT:</b> Memory Virtual Table is a table that contains the virtual address and physical address of the memory.
+                        <b>MVT:</b> Multi Programming with Variable number of Tasks that contains the virtual address and physical address of the memory.
                     </li>
                     <li>
-                        <b>MFT:</b> Memory File Table is a table that contains the virtual address and physical address of the memory.
+                        <b>MFT:</b> Multi Programming with Fixed number of Tasks that contains the virtual address and physical address of the memory.
                     </li>
                 </ul>
             `
