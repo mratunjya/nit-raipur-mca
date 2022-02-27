@@ -1,0 +1,9 @@
+export const BLUE = () => "#0070f3";
+export const GREEN = () => "#00a65a";
+export const ORANGE = () => "#f39c12";
+export const RED = () => "#dd4b39";
+export const PURPLE = () => "#605ca8";
+export const YELLOW = () => "#ff851b";
+export const GREY = () => "#d2d6de";
+export const WHITE = () => "#ffffff";
+export const BLACK = () => "#000000";
