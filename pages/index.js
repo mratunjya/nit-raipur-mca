@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Footer from '../Components/Common/Footer/Footer'
 import Header from '../Components/Common/Header/Header'
 import React, { useState, useEffect, useRef } from 'react'
-import Main from './IndexStyle'
+import Main from '../Components/IndexStyle'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Mousewheel, Pagination, Keyboard, EffectFade } from "swiper";
 import "swiper/css";
