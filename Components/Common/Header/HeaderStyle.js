@@ -8,4 +8,8 @@ export const HeaderTag = styled.header`
     font-weight: bold;
     color: #333;
     border-bottom: 1px solid #ccc;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1;
 `;

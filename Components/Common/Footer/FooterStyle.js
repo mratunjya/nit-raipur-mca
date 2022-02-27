@@ -8,6 +8,7 @@ export const FooterTag = styled.footer`
   left: 0;
   bottom: 0;
   width: 100%;
+  z-index: 1;
 
   * {
     transition: all 0.3s ease;
