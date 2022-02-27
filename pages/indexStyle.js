@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { BLUE, GREEN, RED, ORANGE, YELLOW, PURPLE } from "../Components/Common/colors";
+import { BLUE, GREEN, RED, ORANGE, YELLOW, PURPLE } from "../Components/Common/Colors";
 
 const Main = styled.main`
     .mySwiper {
@@ -36,5 +36,4 @@ const Main = styled.main`
         }
     }
 `
-
 export default Main;
