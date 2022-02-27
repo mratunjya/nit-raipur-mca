@@ -1,8 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
-import { FlexBox } from '../../Components/Common/FlexBox';
+import { FlexBox } from '../FlexBox';
 import { FooterTag } from './FooterStyle';
-import heart from '../../public/assets/svg/heart.svg';
-import code from '../../public/assets/svg/code.svg';
+import heart from '../../../public/assets/svg/heart.svg';
+import code from '../../../public/assets/svg/code.svg';
 
 function Footer() {
   return (
