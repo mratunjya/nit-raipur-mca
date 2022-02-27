@@ -10,10 +10,11 @@ export default function Home() {
         <meta name="description" content="NIT Raipur MCA 2021 - 2024" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <Header header="NIT Raipur MCA 2021 - 2024" />
       <main>
         <h1>Landing Page</h1>
       </main>
-      <Footer></Footer>
+      <Footer />
     </>
   )
 }
