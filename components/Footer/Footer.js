@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import styled from 'styled-components';
 import { FlexBox } from '../../components/Common/FlexBox';
 import heart from '../../public/assets/svg/heart.svg';
