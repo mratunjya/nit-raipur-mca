@@ -1,8 +1,10 @@
 import Head from 'next/head'
+import Link from 'next/link'
 import Footer from '../Components/Common/Footer/Footer'
 import Header from '../Components/Common/Header/Header'
 import React, { useState, useEffect, useRef } from 'react'
-import Main from '../Components/IndexStyle'
+import { Main } from '../Components/IndexStyle'
+import { FlexBox } from "../Components/Common/FlexBox";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Mousewheel, Pagination, Keyboard, EffectFade } from "swiper";
 import "swiper/css";
@@ -49,12 +51,12 @@ export default function Home() {
           modules={[Mousewheel, Pagination, Keyboard, EffectFade]}
           className="mySwiper"
         >
-          <SwiperSlide className="SwiperSlide">Semester 1</SwiperSlide>
-          <SwiperSlide className="SwiperSlide">Semester 2</SwiperSlide>
-          <SwiperSlide className="SwiperSlide">Semester 3</SwiperSlide>
-          <SwiperSlide className="SwiperSlide">Semester 4</SwiperSlide>
-          <SwiperSlide className="SwiperSlide">Semester 5</SwiperSlide>
-          <SwiperSlide className="SwiperSlide">Semester 6</SwiperSlide>
+          <SwiperSlide className="SwiperSlide"><Link href="Semester/"><a><FlexBox w="100%" h="100%" align="center" justify="center">Semester 1</FlexBox></a></Link></SwiperSlide>
+          <SwiperSlide className="SwiperSlide"><Link href="Semester/"><a><FlexBox w="100%" h="100%" align="center" justify="center">Semester 2</FlexBox></a></Link></SwiperSlide>
+          <SwiperSlide className="SwiperSlide"><Link href="Semester/"><a><FlexBox w="100%" h="100%" align="center" justify="center">Semester 3</FlexBox></a></Link></SwiperSlide>
+          <SwiperSlide className="SwiperSlide"><Link href="Semester/"><a><FlexBox w="100%" h="100%" align="center" justify="center">Semester 4</FlexBox></a></Link></SwiperSlide>
+          <SwiperSlide className="SwiperSlide"><Link href="Semester/"><a><FlexBox w="100%" h="100%" align="center" justify="center">Semester 5</FlexBox></a></Link></SwiperSlide>
+          <SwiperSlide className="SwiperSlide"><Link href="Semester/"><a><FlexBox w="100%" h="100%" align="center" justify="center">Semester 6</FlexBox></a></Link></SwiperSlide>
         </Swiper>
       </Main>
       <div ref={refFooter}>
