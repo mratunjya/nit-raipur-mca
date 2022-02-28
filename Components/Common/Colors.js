@@ -1,9 +1,9 @@
-export const BLUE = () => "#0070f3";
-export const GREEN = () => "#00a65a";
-export const ORANGE = () => "#f39c12";
-export const RED = () => "#dd4b39";
-export const PURPLE = () => "#605ca8";
-export const YELLOW = () => "#ff851b";
+export const BLUE = () => "#71b5f4 ";
+export const GREEN = () => "#74f471";
+export const ORANGE = () => "#f4af71";
+export const RED = () => "#F47174 ";
+export const PURPLE = () => "#7174f4";
+export const YELLOW = () => "#f4f171";
 export const GREY = () => "#d2d6de";
 export const WHITE = () => "#ffffff";
 export const BLACK = () => "#000000";
