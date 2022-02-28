@@ -4,9 +4,6 @@ export const FooterTag = styled.footer`
   background-color: #fafafa;
   padding: 1rem;
   text-align: center;
-  position: absolute;
-  left: 0;
-  bottom: 0;
   width: 100%;
   z-index: 1;
 
