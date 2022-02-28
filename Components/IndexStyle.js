@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { BLUE, GREEN, RED, ORANGE, YELLOW, PURPLE } from "../Components/Common/Colors";
 
-const Main = styled.main`
+export const Main = styled.main`
     .mySwiper {
         width: 100%;
         height: calc(100vh - ${props => props.headerHeight+"px"} - ${props => props.footerHeight+"px"});
@@ -36,4 +36,3 @@ const Main = styled.main`
         }
     }
 `
-export default Main;
