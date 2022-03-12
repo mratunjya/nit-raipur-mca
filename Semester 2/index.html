@@ -1,0 +1,210 @@
+<html lang="en">
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="../JavaScript/loader.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script src="https://kit.fontawesome.com/952d5d526e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/margin.css">
+    <link rel="stylesheet" href="../css/width.css">
+    <link rel="stylesheet" href="../css/master.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <title>Semester II: NIT Raipur MCA 2021 - 2024</title>
+</head>
+
+<body>
+    <div class="loader"></div>
+    <header class="animate__animated animate__rubberBand header">
+        <h1 class="text-center"><a href="../" class="no-deco">NIT Raipur MCA 2021 - 2024 &nbsp;&nbsp;&nbsp;Semester II</a></h1>
+    </header>
+    <a href="#time-table-btn"><button class="time-table-btn animate__animated animate__fadeIn" id="time-table-btn" onclick="time_table_show()">Time Table</button></a>
+    <a href="#syllabus-btn"><button class="syllabus-btn animate__animated animate__fadeIn" id="syllabus-btn" onclick="syllabus_show()">Syllabus</button></a>
+
+    <section class="background center animate__animated animate__bounceIn">
+        <div class="flex space-between flex-wrap cl-al-nb w-95-cent center">
+            <div class="notice-board m-t-40" id="notice-board">
+                <h2 class="card-h2"><a href="#notice-board" onclick="scroll_minus70()">Notice Board & Important Documents</a></h2>
+                <ol class="m-l-40">
+                    <li><a href="PDF/Academic Calender MCA 2nd Sem 2022 - Revised.pdf" target="_blank">Academic Calender</a></li>
+                </ol>
+            </div>
+            <div class="class-links m-t-40" id="class-links">
+                <div>
+                    <h2 class="card-h2"><a href="#class-links" onclick="scroll_minus70()">Class Links</a></h2>
+                    <div>
+                        <h3>Statical Computing:</h3>
+                        <ol class="m-l-40">
+                            <li><a href="https://meet.google.com/sxr-qdzd-mrr" target="_blank">https://meet.google.com/sxr-qdzd-mrr</a></li>
+                        </ol>
+                    </div>
+                    <div>
+                        <h3 class="m-t-12">Data Structure:</h3>
+                        <ol class="m-l-40">
+                            <li><a href="https://meet.google.com/bhc-vxvf-nto" target="_blank">https://meet.google.com/bhc-vxvf-nto</a></li>
+                        </ol>
+                    </div>
+                    <div>
+                        <h3 class="m-t-12">Theory of Computation:</h3>
+                        <ol class="m-l-40">
+                            <li><a href="https://meet.google.com/kno-upjr-tsc" target="_blank">https://meet.google.com/kno-upjr-tsc</a></li>
+                        </ol>
+                    </div>
+                    <div>
+                        <h3 class="m-t-12">Software Engineering:</h3>
+                        <ol class="m-l-40">
+                            <li><a href="http://meet.google.com/gnv-bchp-fia" target="_blank">http://meet.google.com/gnv-bchp-fia</a></li>
+                        </ol>
+                    </div>
+                    <div>
+                        <h3 class="m-t-12">Database Management System:</h3>
+                        <ol class="m-l-40">
+                            <li><a href="https://meet.google.com/jgw-gfao-chy" target="_blank">https://meet.google.com/jgw-gfao-chy</a></li>
+                        </ol>
+                    </div>
+                    <div class="lab-201">
+                        <h3 class="m-t-12">Lab 201:</h3>
+                        <ol class="m-l-40">
+                            <li><a href="https://meet.google.com/grn-wxmf-pvq" target="_blank">https://meet.google.com/grn-wxmf-pvq</a></li>
+                        </ol>
+                    </div>
+                    <div class="lab-202">
+                        <h3 class="m-t-12">Lab 202:</h3>
+                        <ol class="m-l-40">
+                            <li><a href="https://meet.google.com/jgw-gfao-chy" target="_blank">https://meet.google.com/jgw-gfao-chy</a></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <div class="attendance-links m-t-40" id="attendance-links">
+                <h2 class="card-h2"><a href="#attendance-links" onclick="scroll_minus70()">Attendance Links</a></h2>
+                <div>
+                    <h3>Statical Computing:</h3>
+                    <ol class="m-l-40">
+                        <li><a href="https://docs.google.com/forms/d/13um0sJXrbtXh9R-Kx8-nDfqac5RUAB8SzR4Q_vYED_c/viewform?edit_requested=true" target="_blank">https://docs.google.com/forms/d/13um0sJXrbtXh9R-Kx8-nDfqac5RUAB8SzR4Q_vYED_c/viewform?edit_requested=true</a></li>
+                    </ol>
+                </div>
+                <div>
+                    <h3 class="m-t-12">Data Structure:</h3>
+                    <ol class="m-l-40">
+                        <li><a href="https://forms.gle/v98ENdNLvbFvhhUS9" target="_blank">https://forms.gle/v98ENdNLvbFvhhUS9</a></li>
+                    </ol>
+                </div>
+                <div>
+                    <h3 class="m-t-12">Theory of Computation:</h3>
+                    <ol class="m-l-40">
+                        <li><a href="https://forms.gle/SKeWMaiPFUqzUyrY6" target="_blank">https://forms.gle/SKeWMaiPFUqzUyrY6</a></li>
+                    </ol>
+                </div>
+                <div>
+                    <h3 class="m-t-12">Software Engineering:</h3>
+                    <h4>Ma'am Takes Attendance via Google Meet Attendance Tool</h4>
+                </div>
+                <div>
+                    <h3 class="m-t-12">Database Management System:</h3>
+                    <ol class="m-l-40">
+                        <li><a href="https://forms.gle/bpVmT6Upn4MrK8Ty5" target="_blank">https://forms.gle/bpVmT6Upn4MrK8Ty5</a></li>
+                    </ol>
+                </div>
+                <div class="lab-201">
+                    <h3 class="m-t-12">Lab 201:</h3>
+                    <ol class="m-l-40">
+                        <li><a href="https://forms.gle/6k9C7bjeb5WKmpz19" target="_blank">https://forms.gle/6k9C7bjeb5WKmpz19</a></li>
+                    </ol>
+                </div>
+                <div class="lab-202">
+                    <h3 class="m-t-12">Lab 202:</h3>
+                    <ol class="m-l-40">
+                        <li><a href="https://forms.gle/nAVqpMwuQdm9aPBF8" target="_blank">https://forms.gle/nAVqpMwuQdm9aPBF8</a></li>
+                    </ol>
+                </div>
+            </div>
+            <div class="Books m-t-40" id="Books">
+                <h2 class="card-h2"><a href="#Books" onclick="scroll_minus70()">Books</a></h2>
+            </div>
+            <div class="Important-msg m-t-40" id="Important-msg">
+                <h2 class="card-h2"><a href="#Important-msg" onclick="scroll_minus70()">Important Messages</a></h2>
+            </div>
+        </div>
+    </section>
+
+    <section class="time-table animate__animated animate__slideInLeft" id="time-table">
+        <button onclick="time_table_hide()"><i class="fas fa-times"></i></button>
+        <div class="time-table-content flex-direction-column flex">
+            <div>
+                <img src="jpg/MCA Time Table Sem 2 2022.jpeg" alt="Time Table" srcset="">
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="syllabus animate__animated animate__slideInRight" id="syllabus">
+        <button onclick="syllabus_hide()"><i class="fas fa-times"></i></button>
+        <div class="syllabus-content flex-direction-column flex">
+            <div class="flex flex-wrap ">
+                <div>
+                    <h1>Operating System</h1>
+                </div>
+                <div><img src="jpg/Operating System.jpg" alt="" srcset=""></div>
+            </div>
+            <div class="flex flex-wrap ">
+                <div>
+                    <h1>Computer Oriented Numerical Analysis</h1>
+                </div>
+                <div><img src="jpg/Computer Oriented Numerical Analysis.jpg" alt="" srcset=""></div>
+            </div>
+            <div class="flex flex-wrap ">
+                <div>
+                    <h1>Problem Solving and Programming</h1>
+                </div>
+                <div><img src="jpg/Problem Solving and Programming.jpeg" alt="" srcset=""></div>
+            </div>
+            <div class="flex flex-wrap ">
+                <div>
+                    <h1>Professional Communication in English</h1>
+                </div>
+                <div><img src="jpg/Professional Communication in English.jpg" alt="" srcset=""></div>
+            </div>
+            <div class="flex flex-wrap ">
+                <div>
+                    <h1>Computer System Architecture</h1>
+                </div>
+                <div><img src="jpg/Computer System Architecture.jpg" alt="" srcset=""></div>
+            </div>
+            <div class="flex flex-wrap ">
+                <div>
+                    <h1>Lab - 101</h1>
+                </div>
+                <div><img src="jpg/Lab - 101.jpeg" alt="" srcset=""></div>
+            </div>
+            <div class="flex flex-wrap ">
+                <div>
+                    <h1>Lab - 102</h1>
+                </div>
+                <div><img src="jpg/Lab - 102.jpg" alt="" srcset=""></div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+    <footer class="footer animate__animated animate__fadeInUp">
+        <p><a href="https://www.linkedin.com/in/mratunjya/" target="_blank" style="text-decoration: none; font-family: 'Major Mono Display', monospace;">Made with <img src="../svg/heart-svg.svg" width="2.5%"> And <img src="../svg/code-svg.svg" width="3%"> by Mratunjya Shankhdhar</a></p>
+    </footer>
+
+
+    <script src="JavaScript/onload.js"></script>
+    <script src="JavaScript/time-table.js"></script>
+    <script src="JavaScript/syllabus.js"></script>
+    <script src="../JavaScript/script.js"></script>
+</body>
+
+</html>
