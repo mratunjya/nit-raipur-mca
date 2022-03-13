@@ -31,76 +31,13 @@ body {
     text-shadow: 0px 0px 8px black, 2px 2px 8px white;
 }
 
-.shellScripting {
-    background: #2C3E50;
-    /*fallbackforoldbrowsers*/background: -webkit-linear-gradient(210deg, #FD746C, #2C3E50);
-    /*Chrome10-25,Safari5.1-6*/background: linear-gradient(210deg, #FD746C, #2C3E50);
-    /*W3C,IE10+/Edge,Firefox16+,Chrome26+,Opera12+,Safari7+*/padding-top: 0;
-    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
-    cursor: pointer;
-    text-decoration: none;
-    display: flex;
-    width: 320px;
-    height: 320px;
-    margin: 20px auto 0;
-    align-items: center;
-    justify-content: center;
-    align-self: center;
-}
-
-.shellScripting:hover {
-    background: linear-gradient(to right, #8e2de2, #4a00e0);
-}
-
-.shellScripting h2 {
-    font-size: 14px;
-    color: #fff;
-    font-weight: 100;
-    transform: rotate(0deg);
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    letter-spacing: 1.5px;
-    word-spacing: 2px;
-    text-align: center;
-    font-weight: bold;
-    padding-top: 16px;
-}
-
-.cl-al-nb>div {
+.cl-al-nb > div {
     width: 48%;
     word-wrap: break-word;
-    max-height: 90vh;
     height: fit-content;
-    overflow-y: scroll;
-    overflow-x: hidden;
+    overflow: hidden;
     backdrop-filter: blur(12px);
     background-color: rgba(255, 255, 255, 0.95);
-}
-
-.cl-al-nb>div::-webkit-scrollbar {
-    width: 8px;
-    cursor: pointer;
-}
-
-.cl-al-nb>div::-webkit-scrollbar-track {
-    background-color: #180605;
-    outline: 3px solid #180605;
-    border-radius: 0px 4px 4px 0px;
-    -webkit-border-radius: 0px 4px 4px 0px;
-    -moz-border-radius: 0px 4px 4px 0px;
-    -ms-border-radius: 0px 4px 4px 0px;
-    -o-border-radius: 0px 4px 4px 0px;
-}
-
-.cl-al-nb>div::-webkit-scrollbar-thumb {
-    background-color: #a51c30;
-    border-radius: 17.5px;
-    -webkit-border-radius: 17.5px;
-    -moz-border-radius: 17.5px;
-    -ms-border-radius: 17.5px;
-    -o-border-radius: 17.5px;
 }
 
 .cl-al-nb li {
@@ -112,15 +49,14 @@ body {
 .notice-board,
 .Books,
 .Important-msg {
-    border: 4px solid #180605;
-    border-right: 0px solid transparent;
-    border-radius: 30px 10px 10px 30px;
+    border: 2px solid #191705;
     box-sizing: border-box;
     padding: 0px 25px 20px;
-    -webkit-border-radius: 30px 10px 10px 30px;
-    -moz-border-radius: 30px 10px 10px 30px;
-    -ms-border-radius: 30px 10px 10px 30px;
-    -o-border-radius: 30px 10px 10px 30px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
 }
 
 .class-links:hover,
@@ -128,14 +64,14 @@ body {
 .notice-board:hover,
 .Books:hover,
 .Important-msg:hover {
-    border-color: #a51c30;
+    border-color: #ffeb3b;
 }
 
-.notice-board li:first-of-type>a {
+.notice-board li:first-of-type > a {
     position: relative;
 }
 
-.notice-board li:first-of-type>a::after {
+.notice-board li:first-of-type > a::after {
     content: url(/svg/new-svg.svg);
     display: block;
     width: 20px;
@@ -155,7 +91,6 @@ body {
 }
 
 .background {
-    /* background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("/Semester 1/jpg/background.jpg"); */
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -169,7 +104,7 @@ body {
     box-sizing: border-box;
     position: sticky;
     top: 0;
-    width: calc(100% + 50px - 4px);
+    width: calc(100% + 50px - 2px);
     margin-left: -25px;
     backdrop-filter: blur(12px);
     background-color: #ffffff10;
@@ -215,8 +150,8 @@ body {
 }
 
 .syllabus-btn {
-    background-color: #160506;
-    color: #fbebeb;
+    background-color: #191705;
+    color: #fffdeb;
     padding: 10px 10px 10px 18px;
     font-size: 20px;
     border-radius: 10px 0 0 10px;
@@ -225,8 +160,8 @@ body {
     display: block;
     position: fixed;
     z-index: 2;
-    box-shadow: 0px 0px 8px #dc393c;
-    border: 4px solid #dc393c;
+    box-shadow: 0px 0px 8px #ffeb3b;
+    border: 4px solid #ffeb3b;
     border-right: none;
     font-weight: bold;
     font-family: 'Mochiy Pop P One', sans-serif;
@@ -260,7 +195,7 @@ body {
     background-color: #282A35;
 }
 
-.syllabus>button {
+.syllabus > button {
     background-color: #e9e9ea;
     border-radius: 8px;
     border: 2px solid #b53f51;
@@ -273,20 +208,20 @@ body {
     width: 40px;
 }
 
-.syllabus>button * {
+.syllabus > button * {
     color: #b53f51;
 }
 
-.syllabus-content>.flex>div {
+.syllabus-content > .flex > div {
     background-color: #282A35;
     margin: 20px 0;
 }
 
-.syllabus-content>.flex>div:first-of-type {
+.syllabus-content > .flex > div:first-of-type {
     width: 40%;
 }
 
-.syllabus-content>.flex>div:last-of-type {
+.syllabus-content > .flex > div:last-of-type {
     width: 60%;
     height: 100vh;
     overflow-y: auto;
@@ -294,20 +229,20 @@ body {
     box-sizing: border-box;
 }
 
-.syllabus-content>.flex>div:last-of-type::-webkit-scrollbar {
+.syllabus-content > .flex > div:last-of-type::-webkit-scrollbar {
     width: 12px;
 }
 
-.syllabus-content>.flex>div:last-of-type::-webkit-scrollbar-track {
+.syllabus-content > .flex > div:last-of-type::-webkit-scrollbar-track {
     background-color: #282A35;
 }
 
-.syllabus-content>.flex>div:last-of-type::-webkit-scrollbar-thumb {
+.syllabus-content > .flex > div:last-of-type::-webkit-scrollbar-thumb {
     background-color: #b53f51;
     border-radius: 6px;
 }
 
-.syllabus-content>.flex>div>h1 {
+.syllabus-content > .flex > div > h1 {
     margin-top: 20vh;
     text-align: center;
     color: #e9e9ea;
@@ -398,26 +333,47 @@ body {
 }
 
 .time-table::-webkit-scrollbar-thumb {
-    background-color: #c63336;
+    background-color: #3CDC39;
     border-radius: 6px;
 }
 
-.time-table>button {
-    background-color: #e9e9ea;
-    border-radius: 8px;
-    border: 2px solid #c63336;
+.time-table > button {
+    background-color: #190803;
+    border: 2px solid #ff5722;
     font-size: 20px;
     position: sticky;
     top: 12px;
-    left: calc(100% - 50px);
+    left: 50px;
     z-index: 4;
     cursor: pointer;
     width: 40px;
     height: 40px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
 }
 
-.time-table>button * {
-    color: #c63336;
+.time-table > button:hover {
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+}
+
+.time-table > button * {
+    color: #ff5722;
+}
+
+.time-table-content {
+    margin-top: -41px;
 }
 
 .show {
