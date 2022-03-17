@@ -32,9 +32,12 @@ header h1 {
     font-size: 17px;
     font-weight: bold;
     background: #FF416C;
-    /*fallbackforoldbrowsers*/background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);
-    /*Chrome10-25,Safari5.1-6*/background: linear-gradient(to right, #FF4B2B, #FF416C);
-    /*W3C,IE10+/Edge,Firefox16+,Chrome26+,Opera12+,Safari7+*/transition: all 0.5s ease;
+    /*fallbackforoldbrowsers*/
+    background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);
+    /*Chrome10-25,Safari5.1-6*/
+    background: linear-gradient(to right, #FF4B2B, #FF416C);
+    /*W3C,IE10+/Edge,Firefox16+,Chrome26+,Opera12+,Safari7+*/
+    transition: all 0.5s ease;
     -webkit-transition: all 0.s ease;
     -moz-transition: all 0.s ease;
     -ms-transition: all 0.s ease;
@@ -82,4 +85,14 @@ header h1 {
     -moz-transform: scale(1.5);
     -ms-transform: scale(1.5);
     -o-transform: scale(1.5);
+}
+
+@media only screen and (max-width: 768px) {
+    .card:hover {
+        transform: scale(1.1);
+        -webkit-transform: scale(1.1);
+        -moz-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        -o-transform: scale(1.1);
+    }
 }
