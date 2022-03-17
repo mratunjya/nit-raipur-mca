@@ -176,7 +176,7 @@ body {
 }
 
 .syllabus {
-    background-color: #282A35;
+    background-color: #4c3902;
     position: absolute;
     top: 0;
     left: 0;
@@ -192,28 +192,46 @@ body {
 }
 
 .syllabus::-webkit-scrollbar-track {
-    background-color: #282A35;
+    background-color: #4c3902;
 }
 
 .syllabus > button {
-    background-color: #e9e9ea;
+    background-color: #06120a;
     border-radius: 8px;
-    border: 2px solid #b53f51;
+    border: 2px solid #3fb568;
     font-size: 20px;
     position: sticky;
-    left: calc(100% - 50px);
-    top: 12px;
+    left:  50px;
+    top: calc(100vh - 80px);
     cursor: pointer;
     height: 40px;
     width: 40px;
+    transition: all 0.5s ease-in-out;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+}
+
+.syllabus > button:hover {
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
 }
 
 .syllabus > button * {
-    color: #b53f51;
+    color: #3fb568;
 }
 
 .syllabus-content > .flex > div {
-    background-color: #282A35;
+    background-color: #4c3902;
     margin: 20px 0;
 }
 
@@ -234,12 +252,16 @@ body {
 }
 
 .syllabus-content > .flex > div:last-of-type::-webkit-scrollbar-track {
-    background-color: #282A35;
+    background-color: #4c3902;
 }
 
 .syllabus-content > .flex > div:last-of-type::-webkit-scrollbar-thumb {
-    background-color: #b53f51;
+    background-color: #ff5722;
     border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
 }
 
 .syllabus-content > .flex > div > h1 {
