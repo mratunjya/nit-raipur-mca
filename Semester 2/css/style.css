@@ -128,17 +128,19 @@ body {
     left: 50%;
     position: absolute;
     background: #1F51FF;
-    transition: width 0.3s ease 0s, left 0.3s ease 0s;
     width: 0;
-    -webkit-transition: width 0.3s ease 0s, left 0.3s ease 0s;
-    -moz-transition: width 0.3s ease 0s, left 0.3s ease 0s;
-    -ms-transition: width 0.3s ease 0s, left 0.3s ease 0s;
-    -o-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    opacity: 0;
+    transition: all 0.3s ease 0s;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -ms-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
 }
 
 .card-h2 a:hover:after {
     width: 100%;
     left: 0;
+    opacity: 1;
 }
 
 .card-h2:hover {
