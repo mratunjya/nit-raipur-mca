@@ -473,6 +473,8 @@ body {
     .modal-body {
         max-width: unset;
         padding: 8px;
+        display: flex;
+        overflow-x: overlay;
         border-radius: 8px;
         -webkit-border-radius: 8px;
         -moz-border-radius: 8px;
@@ -481,6 +483,6 @@ body {
     }
 
     .modal-body img {
-        width: fit-content;
+        width: auto;
     }
 }
