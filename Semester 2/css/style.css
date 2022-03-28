@@ -31,7 +31,7 @@ body {
     text-shadow: 0px 0px 8px black, 2px 2px 8px white;
 }
 
-.cl-al-nb > div {
+.cl-al-nb>div {
     width: 48%;
     word-wrap: break-word;
     height: fit-content;
@@ -67,11 +67,11 @@ body {
     border-color: #ffeb3b;
 }
 
-.notice-board li:first-of-type > a {
+.notice-board li:first-of-type>a {
     position: relative;
 }
 
-.notice-board li:first-of-type > a::after {
+.notice-board li:first-of-type>a::after {
     content: url(/svg/new-svg.svg);
     display: block;
     width: 20px;
@@ -197,13 +197,13 @@ body {
     background-color: #4c3902;
 }
 
-.syllabus > button {
+.syllabus>button {
     background-color: #06120a;
     border-radius: 8px;
     border: 2px solid #3fb568;
     font-size: 20px;
     position: sticky;
-    left:  50px;
+    left: 50px;
     top: calc(100vh - 80px);
     cursor: pointer;
     height: 40px;
@@ -220,7 +220,7 @@ body {
     -o-transition: all 0.5s ease-in-out;
 }
 
-.syllabus > button:hover {
+.syllabus>button:hover {
     transform: scale(1.2);
     -webkit-transform: scale(1.2);
     -moz-transform: scale(1.2);
@@ -228,20 +228,20 @@ body {
     -o-transform: scale(1.2);
 }
 
-.syllabus > button * {
+.syllabus>button * {
     color: #3fb568;
 }
 
-.syllabus-content > .flex > div {
+.syllabus-content>.flex>div {
     background-color: #4c3902;
     margin: 20px 0;
 }
 
-.syllabus-content > .flex > div:first-of-type {
+.syllabus-content>.flex>div:first-of-type {
     width: 40%;
 }
 
-.syllabus-content > .flex > div:last-of-type {
+.syllabus-content>.flex>div:last-of-type {
     width: 60%;
     height: 100vh;
     overflow-y: auto;
@@ -249,15 +249,15 @@ body {
     box-sizing: border-box;
 }
 
-.syllabus-content > .flex > div:last-of-type::-webkit-scrollbar {
+.syllabus-content>.flex>div:last-of-type::-webkit-scrollbar {
     width: 12px;
 }
 
-.syllabus-content > .flex > div:last-of-type::-webkit-scrollbar-track {
+.syllabus-content>.flex>div:last-of-type::-webkit-scrollbar-track {
     background-color: #4c3902;
 }
 
-.syllabus-content > .flex > div:last-of-type::-webkit-scrollbar-thumb {
+.syllabus-content>.flex>div:last-of-type::-webkit-scrollbar-thumb {
     background-color: #ff5722;
     border-radius: 6px;
     -webkit-border-radius: 6px;
@@ -266,7 +266,7 @@ body {
     -o-border-radius: 6px;
 }
 
-.syllabus-content > .flex > div > h1 {
+.syllabus-content>.flex>div>h1 {
     margin-top: 20vh;
     text-align: center;
     color: #e9e9ea;
@@ -361,7 +361,7 @@ body {
     border-radius: 6px;
 }
 
-.time-table > button {
+.time-table>button {
     background-color: #190803;
     border: 2px solid #ff5722;
     font-size: 20px;
@@ -384,7 +384,7 @@ body {
     -o-transition: all 0.2s ease-in-out;
 }
 
-.time-table > button:hover {
+.time-table>button:hover {
     transform: scale(1.2);
     -webkit-transform: scale(1.2);
     -moz-transform: scale(1.2);
@@ -392,7 +392,7 @@ body {
     -o-transform: scale(1.2);
 }
 
-.time-table > button * {
+.time-table>button * {
     color: #ff5722;
 }
 
@@ -447,7 +447,8 @@ body {
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
     overflow: auto;
-    height: 90vh;
+    height: fit-content;
+    max-height: 90vh;
     box-shadow: 0px 0px 16px rgba(255, 255, 255, 1);
 }
 
@@ -466,4 +467,20 @@ body {
 
 .is-flex {
     display: flex;
+}
+
+@media only screen and (max-width: 768px) {
+    .modal-body {
+        max-width: unset;
+        padding: 8px;
+        border-radius: 8px;
+        -webkit-border-radius: 8px;
+        -moz-border-radius: 8px;
+        -ms-border-radius: 8px;
+        -o-border-radius: 8px;
+    }
+
+    .modal-body img {
+        width: fit-content;
+    }
 }

@@ -1,3 +1,15 @@
+const noScroll = () => {
+    document.body.style.overflow = 'hidden';
+}
+
+const scroll = () => {
+    document.body.style.overflow = 'auto';
+}
+
+const scrollModalTop = () => {
+    document.querySelector('.modal-body').scrollTo(0, 0);
+}
+
 allClicks = document.querySelectorAll('.open-modal');
 
 allClicks.forEach(function (item) {
@@ -7,20 +19,18 @@ allClicks.forEach(function (item) {
         var modalImag = document.querySelector('.modal-body img');
         modalImag.src = this.dataset.src;
         noScroll();
+        scrollModalTop();
     });
 });
 
 modalContainer = document.querySelector('.modal-container');
+modalContainerImg = document.querySelector('.modal-body img');
 
 modalContainer.addEventListener('click', function () {
     this.classList.toggle('is-flex');
     scroll();
-})
+});
 
-const noScroll = () => {
-    document.body.style.overflow = 'hidden';
-}
-
-const scroll = () => {
-    document.body.style.overflow = 'auto';
-}
+modalContainerImg.addEventListener('click', function (e) {
+    e.stopPropagation();
+});
