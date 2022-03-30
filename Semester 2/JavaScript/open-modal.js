@@ -19,12 +19,12 @@ allClicks = document.querySelectorAll('.open-modal');
 allClicks.forEach(function (item) {
     item.addEventListener('click', function () {
         windowScrollTop();
-        scrollModalTop();
         noScroll();
         var modal = document.querySelector('.modal-container');
         modal.classList.toggle('is-flex');
         var modalImag = document.querySelector('.modal-body img');
         modalImag.src = this.dataset.src;
+        scrollModalTop();
     });
 });
 
