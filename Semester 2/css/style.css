@@ -469,6 +469,12 @@ body {
     display: flex;
 }
 
+iframe {
+    width: 100%;
+    border: none;
+    min-height: 190px;
+}
+
 @media only screen and (max-width: 768px) {
     .modal-body {
         max-width: unset;

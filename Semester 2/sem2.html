@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+    <title>MCA NITRR (Sem-2)</title>
+    <style>
+        .disclaimer {
+            display: none !important;
+        }
+
+        .c-lg {
+            color: #ffc107;
+            font-size: 41px;
+            font-weight: bold;
+        }
+
+        .card-body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        @media (min-width: 576px) {
+            .card {
+                height: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 d-none" id="no-class">
+                <div class="card text-center mb-5">
+                    <div class="card-body">
+                        <h5 class="card-title" id="n-title">No class for today</h5>
+                        <p class="card-text" id="n-cap">
+                            For now you can revise all that you learned this week
+                        </p>
+                        Links for google classrooms
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-8" id="current-class">
+                <div class="card text-center">
+                    <div class="card-header" id="c-head">Class going on</div>
+                    <div class="card-body">
+                        <h5 class="card-title" id="c-subject"></h5>
+                        <p class="card-text" id="c-teacher"></p>
+                        <div>
+                            <a href="#" class="btn btn-danger" id="c-attendance-link" target="_blank">Attendance</a>
+                            <a href="#" class="btn btn-primary" id="c-class-link" target="_blank">Join</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4" id="next-class">
+                <div class="card text-center">
+                    <div class="card-header">Next class</div>
+                    <div class="card-body">
+                        <h5 class="card-title" id="nx-subject"></h5>
+                        <p class="card-text" id="nx-teacher"></p>
+                        <a href="#" class="btn btn-primary" id="nx-class-link" target="_blank">Join</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+<script>
+    window.onload = function () {
+        update_class();
+    };
+    var n_class = document.getElementById("no-class");
+    var c_class = document.getElementById("current-class");
+    var nx_class = document.getElementById("next-class");
+    const subjects = [
+        {
+            name: "Statistical Computing",
+            teacher: "Ms. Ambika Sahu",
+            class: "https://meet.google.com/sxr-qdzd-mrr",
+            attendance:
+                "https://docs.google.com/forms/u/0/d/e/1FAIpQLSfyyNyXiGVd4Lz0h2F4xrQGdpcYqL2V5R66mbCnO2iYFJ5axg/formResponse",
+        },
+        {
+            name: "Data Structure",
+            teacher: "Dr. Dibakar Saha",
+            class: "https://meet.google.com/bhc-vxvf-nto",
+            attendance: "https://forms.gle/v98ENdNLvbFvhhUS9",
+        },
+        {
+            name: "Software Engineering",
+            teacher: "Dr. Manju Pandey",
+            class: "http://meet.google.com/gnv-bchp-fia",
+            attendance: false,
+        },
+        {
+            name: "Theory of Computation",
+            teacher: "Dr. Tanmoy K. Das",
+            class: "http://meet.google.com/kno-upjr-tsc",
+            attendance: "https://forms.gle/SKeWMaiPFUqzUyrY6",
+        },
+        {
+            name: "Database Management System",
+            teacher: "Dr. Priyanka Tripathi",
+            class: "https://meet.google.com/jgw-gfao-chy",
+            attendance: "https://forms.gle/bpVmT6Upn4MrK8Ty5",
+        },
+        {
+            name: "Computer Lab-201",
+            teacher: "Dr. Dibakar Saha and Dr. C.M. Anish",
+            class: "https://meet.google.com/bhc-vxvf-nto",
+            attendance: "https://forms.gle/6k9C7bjeb5WKmpz19",
+        },
+        {
+            name: "Computer Lab-202",
+            teacher: "Dr. Priyanka Tripathi and Dr. Manju Pandey",
+            class: "http://meet.google.com/uru-kcnq-awj",
+            attendance: "https://forms.gle/nAVqpMwuQdm9aPBF8",
+        },
+    ];
+    var time_table = [
+        [0, 1, 3, 4, 5],
+        [0, 1, 3, 2, 6],
+        [0, 1, 4, 2, 5],
+        [1, 3, 4, 2, 6],
+        [0, 3, 2, 4],
+    ];
+    function update_class() {
+        var txt;
+        var today = new Date();
+        var day = today.getDay();
+        var hr = parseInt(today.getHours());
+        var mn = parseInt(today.getMinutes());
+        var sc = parseInt(today.getSeconds());
+        if (day == 0 || day == 6) {
+            n_class.classList.remove("d-none");
+            n_class.classList.add("d-block");
+            c_class.classList.remove("d-block");
+            c_class.classList.add("d-none");
+            nx_class.classList.remove("d-block");
+            nx_class.classList.add("d-none");
+        } else {
+            n_class.classList.remove("d-block");
+            n_class.classList.add("d-none");
+            c_class.classList.remove("d-none");
+            c_class.classList.add("d-block");
+            nx_class.classList.remove("d-block");
+            nx_class.classList.add("d-none");
+            c_class.classList.remove("col-sm-8");
+            c_class.classList.add("col-sm-12");
+            if (hr < 10 || (hr == 10 && mn < 30)) {
+                if (hr == 10)
+                    document.getElementById("c-head").innerHTML =
+                        "Class about to start in <b>" +
+                        (29 - mn) +
+                        ":" +
+                        (59 - sc) +
+                        "</b> mins";
+                else
+                    document.getElementById("c-head").innerHTML =
+                        "Class will be starting at <b>10:30</b> am";
+                document.getElementById("c-class-link").classList.add("disabled");
+                document
+                    .getElementById("c-attendance-link")
+                    .classList.add("disabled");
+                document.getElementById("c-subject").innerHTML =
+                    subjects[time_table[day - 1][0]].name;
+                document.getElementById("c-teacher").innerHTML =
+                    subjects[time_table[day - 1][0]].teacher;
+            } else if (
+                (day == 5 && (hr > 14 || (hr == 14 && mn > 45))) ||
+                hr > 16 ||
+                (hr == 16 && mn > 45)
+            ) {
+                n_class.classList.remove("d-none");
+                n_class.classList.add("d-block");
+                c_class.classList.remove("d-block");
+                c_class.classList.add("d-none");
+                nx_class.classList.remove("d-block");
+                nx_class.classList.add("d-none");
+                document.getElementById("n-title").innerHTML =
+                    "All classes for today have already ended";
+                document.getElementById("n-cap").innerHTML =
+                    "For now you can revise all that you learned today";
+            } else {
+                document.getElementById("c-head").innerHTML = "Class going on";
+                document.getElementById("c-class-link").classList.remove("disabled");
+                document
+                    .getElementById("c-attendance-link")
+                    .classList.remove("disabled");
+                c_class.classList.remove("col-sm-12");
+                nx_class.classList.remove("d-none");
+                nx_class.classList.add("d-block");
+                c_class.classList.add("col-sm-8");
+                if (hr < 11 || (hr == 11 && mn <= 15)) {
+                    document.getElementById("c-subject").innerHTML =
+                        subjects[time_table[day - 1][0]].name;
+                    document.getElementById("c-teacher").innerHTML =
+                        subjects[time_table[day - 1][0]].teacher;
+                    document.getElementById("c-class-link").href =
+                        subjects[time_table[day - 1][0]].class;
+                    document.getElementById("c-attendance-link").href =
+                        subjects[time_table[day - 1][0]].attendance;
+                    document.getElementById("nx-subject").innerHTML =
+                        subjects[time_table[day - 1][1]].name;
+                    document.getElementById("nx-teacher").innerHTML =
+                        subjects[time_table[day - 1][1]].teacher;
+                    document.getElementById("nx-class-link").href =
+                        subjects[time_table[day - 1][1]].class;
+                } else if (hr == 11 && mn < 30) {
+                    document.getElementById("c-head").innerHTML = "Break";
+                    document.getElementById("c-subject").innerHTML = "Break ends in";
+                    document.getElementById("c-teacher").innerHTML =
+                        29 - mn + ":" + (59 - sc);
+                    document.getElementById("c-teacher").classList.add("c-lg");
+                    document.getElementById("c-attendance-link").href =
+                        subjects[time_table[day - 1][0]].attendance;
+                    document.getElementById("c-class-link").innerHTML = "Class ended";
+                    document.getElementById("c-class-link").classList.add("disabled");
+                    document.getElementById("nx-subject").innerHTML =
+                        subjects[time_table[day - 1][1]].name;
+                    document.getElementById("nx-teacher").innerHTML =
+                        subjects[time_table[day - 1][1]].teacher;
+                    document.getElementById("nx-class-link").href =
+                        subjects[time_table[day - 1][1]].class;
+                } else if (hr < 12 || (hr == 12 && mn <= 15)) {
+                    document.getElementById("c-class-link").innerHTML = "Join";
+                    document
+                        .getElementById("c-class-link")
+                        .classList.remove("disabled");
+                    document.getElementById("c-teacher").classList.remove("c-lg");
+                    document.getElementById("c-subject").innerHTML =
+                        subjects[time_table[day - 1][1]].name;
+                    document.getElementById("c-teacher").innerHTML =
+                        subjects[time_table[day - 1][1]].teacher;
+                    document.getElementById("c-class-link").href =
+                        subjects[time_table[day - 1][1]].class;
+                    document.getElementById("c-attendance-link").href =
+                        subjects[time_table[day - 1][1]].attendance;
+                    document.getElementById("nx-subject").innerHTML =
+                        subjects[time_table[day - 1][2]].name;
+                    document.getElementById("nx-teacher").innerHTML =
+                        subjects[time_table[day - 1][2]].teacher;
+                    document.getElementById("nx-class-link").href =
+                        subjects[time_table[day - 1][2]].class;
+                } else if (hr == 12 && mn < 30) {
+                    document.getElementById("c-head").innerHTML = "Break";
+                    document.getElementById("c-subject").innerHTML = "Break ends in";
+                    document.getElementById("c-teacher").innerHTML =
+                        29 - mn + ":" + (59 - sc);
+                    document.getElementById("c-teacher").classList.add("c-lg");
+                    document.getElementById("c-attendance-link").href =
+                        subjects[time_table[day - 1][1]].attendance;
+                    document.getElementById("c-class-link").innerHTML = "Class ended";
+                    document.getElementById("c-class-link").classList.add("disabled");
+                    document.getElementById("nx-subject").innerHTML =
+                        subjects[time_table[day - 1][2]].name;
+                    document.getElementById("nx-teacher").innerHTML =
+                        subjects[time_table[day - 1][2]].teacher;
+                    document.getElementById("nx-class-link").href =
+                        subjects[time_table[day - 1][2]].class;
+                } else if (hr < 13 || (hr == 13 && mn <= 15)) {
+                    document.getElementById("c-class-link").innerHTML = "Join";
+                    document
+                        .getElementById("c-class-link")
+                        .classList.remove("disabled");
+                    document.getElementById("c-teacher").classList.remove("c-lg");
+                    document.getElementById("c-subject").innerHTML =
+                        subjects[time_table[day - 1][2]].name;
+                    document.getElementById("c-teacher").innerHTML =
+                        subjects[time_table[day - 1][2]].teacher;
+                    document.getElementById("c-class-link").href =
+                        subjects[time_table[day - 1][2]].class;
+                    if (!subjects[time_table[day - 1][2]].attendance)
+                        document
+                            .getElementById("c-attendance-link")
+                            .classList.add("disabled");
+                    else
+                        document.getElementById("c-attendance-link").href =
+                            subjects[time_table[day - 1][2]].attendance;
+                    document.getElementById("nx-subject").innerHTML =
+                        subjects[time_table[day - 1][3]].name;
+                    document.getElementById("nx-teacher").innerHTML =
+                        subjects[time_table[day - 1][3]].teacher;
+                    document.getElementById("nx-class-link").href =
+                        subjects[time_table[day - 1][3]].class;
+                } else if (hr == 13 && mn > 15) {
+                    document.getElementById("c-head").innerHTML = "Recess";
+                    document.getElementById("c-subject").innerHTML = "Recess ends in";
+                    document.getElementById("c-teacher").innerHTML =
+                        59 - mn + ":" + (59 - sc);
+                    document.getElementById("c-teacher").classList.add("c-lg");
+                    document.getElementById("c-attendance-link").href =
+                        subjects[time_table[day - 1][2]].attendance;
+                    document.getElementById("c-class-link").innerHTML = "Class ended";
+                    document.getElementById("c-class-link").classList.add("disabled");
+                    document.getElementById("nx-subject").innerHTML =
+                        subjects[time_table[day - 1][3]].name;
+                    document.getElementById("nx-teacher").innerHTML =
+                        subjects[time_table[day - 1][3]].teacher;
+                    document.getElementById("nx-class-link").href =
+                        subjects[time_table[day - 1][3]].class;
+                } else if (hr == 14 && mn <= 45) {
+                    document.getElementById("c-class-link").innerHTML = "Join";
+                    document
+                        .getElementById("c-class-link")
+                        .classList.remove("disabled");
+                    document.getElementById("c-teacher").classList.remove("c-lg");
+                    if (day == 5) {
+                        nx_class.classList.remove("d-block");
+                        nx_class.classList.add("d-none");
+                        c_class.classList.remove("col-sm-8");
+                        c_class.classList.add("col-sm-12");
+                    }
+                    document.getElementById("c-subject").innerHTML =
+                        subjects[time_table[day - 1][3]].name;
+                    document.getElementById("c-teacher").innerHTML =
+                        subjects[time_table[day - 1][3]].teacher;
+                    document.getElementById("c-class-link").href =
+                        subjects[time_table[day - 1][3]].class;
+                    if (!subjects[time_table[day - 1][3]].attendance)
+                        document
+                            .getElementById("c-attendance-link")
+                            .classList.add("disabled");
+                    else
+                        document.getElementById("c-attendance-link").href =
+                            subjects[time_table[day - 1][3]].attendance;
+                    if (day != 5) {
+                        document.getElementById("nx-subject").innerHTML =
+                            subjects[time_table[day - 1][4]].name;
+                        document.getElementById("nx-teacher").innerHTML =
+                            subjects[time_table[day - 1][4]].teacher;
+                        document.getElementById("nx-class-link").href =
+                            subjects[time_table[day - 1][4]].class;
+                    }
+                } else if (hr == 14 && mn > 45) {
+                    document.getElementById("c-head").innerHTML = "Break";
+                    document.getElementById("c-subject").innerHTML = "Break ends in";
+                    document.getElementById("c-teacher").innerHTML =
+                        59 - mn + ":" + (59 - sc);
+                    document.getElementById("c-teacher").classList.add("c-lg");
+                    if (!subjects[time_table[day - 1][3]].attendance)
+                        document
+                            .getElementById("c-attendance-link")
+                            .classList.add("disabled");
+                    else
+                        document.getElementById("c-attendance-link").href =
+                            subjects[time_table[day - 1][3]].attendance;
+                    document.getElementById("c-class-link").innerHTML = "Class ended";
+                    document.getElementById("c-class-link").classList.add("disabled");
+                    document.getElementById("nx-subject").innerHTML =
+                        subjects[time_table[day - 1][4]].name;
+                    document.getElementById("nx-teacher").innerHTML =
+                        subjects[time_table[day - 1][4]].teacher;
+                    document.getElementById("nx-class-link").href =
+                        subjects[time_table[day - 1][4]].class;
+                } else {
+                    document.getElementById("c-class-link").innerHTML = "Join";
+                    document
+                        .getElementById("c-class-link")
+                        .classList.remove("disabled");
+                    document.getElementById("c-teacher").classList.remove("c-lg");
+                    nx_class.classList.remove("d-block");
+                    nx_class.classList.add("d-none");
+                    c_class.classList.remove("col-sm-8");
+                    c_class.classList.add("col-sm-12");
+                    document.getElementById("c-subject").innerHTML =
+                        subjects[time_table[day - 1][4]].name;
+                    document.getElementById("c-teacher").innerHTML =
+                        subjects[time_table[day - 1][4]].teacher;
+                    document.getElementById("c-class-link").href =
+                        subjects[time_table[day - 1][4]].class;
+                    document.getElementById("c-attendance-link").href =
+                        subjects[time_table[day - 1][4]].attendance;
+                }
+            }
+        }
+    }
+
+    setInterval(update_class, 1000);
+</script>
+
+</html>
