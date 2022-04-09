@@ -1,13 +1,4 @@
 @media only screen and (max-width: 768px) {
-    .shellScripting {
-        box-sizing: border-box;
-        padding: 10px 0 0 0;
-    }
-
-    .shellScripting h2 {
-        font-weight: 300;
-    }
-
     .cl-al-nb>div {
         width: 100%;
         max-width: 100% !important;
@@ -59,21 +50,5 @@
         width: 100%;
         margin: 0;
         padding: 0;
-    }
-
-    .time-table-btn {
-        width: 100px;
-        padding: 4px;
-        top: 30vh;
-        text-align: center;
-        line-height: 30px;
-    }
-
-    .time-table img {
-        margin-top: 80px;
-        width: 90%;
-        margin-left: auto;
-        margin-right: auto;
-        display: block;
     }
 }
