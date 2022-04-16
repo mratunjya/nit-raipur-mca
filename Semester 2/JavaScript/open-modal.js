@@ -15,16 +15,16 @@ const windowScrollTop = () => {
 };
 
 allClicks = document.querySelectorAll(".open-modal");
-modalContainer = document.querySelector(".modal-container");
-modalContainerImg = document.querySelector(".modal-body img");
+const modalContainer = document.querySelector(".modal-container");
+const modalContainerImg = document.querySelector(".modal-body img");
 
 allClicks.forEach(function (item) {
   item.addEventListener("click", function () {
-    modalImag.src = `jpg/${this.dataset.src}`;
+    modalContainerImg.src = `jpg/${this.dataset.src}`;
     scrollModalTop();
     windowScrollTop();
     noScroll();
-    modal.classList.toggle("is-flex");
+    modalContainer.classList.toggle("is-flex");
   });
 });
 
