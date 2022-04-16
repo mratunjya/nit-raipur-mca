@@ -15,21 +15,18 @@ const windowScrollTop = () => {
 };
 
 allClicks = document.querySelectorAll(".open-modal");
+modalContainer = document.querySelector(".modal-container");
+modalContainerImg = document.querySelector(".modal-body img");
 
 allClicks.forEach(function (item) {
   item.addEventListener("click", function () {
-    var modalImag = document.querySelector(".modal-body img");
     modalImag.src = `jpg/${this.dataset.src}`;
     scrollModalTop();
     windowScrollTop();
     noScroll();
-    var modal = document.querySelector(".modal-container");
     modal.classList.toggle("is-flex");
   });
 });
-
-modalContainer = document.querySelector(".modal-container");
-modalContainerImg = document.querySelector(".modal-body img");
 
 modalContainer.addEventListener("click", function () {
   this.classList.toggle("is-flex");
