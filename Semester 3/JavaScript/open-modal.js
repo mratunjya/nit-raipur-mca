@@ -20,7 +20,7 @@ const modalContainerImg = document.querySelector(".modal-body img");
 
 allClicks.forEach(function (item) {
   item.addEventListener("click", function () {
-    modalContainerImg.src = `png/${this.dataset.src}`;
+    modalContainerImg.src = `${this.dataset.ext}/${this.dataset.src}.${this.dataset.ext}`;
     scrollModalTop();
     windowScrollTop();
     noScroll();
