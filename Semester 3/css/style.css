@@ -207,20 +207,24 @@ iframe {
   min-height: 190px;
 }
 
-@media only screen and (max-width: 768px) {
-  .modal-body {
-    max-width: unset;
-    padding: 8px;
-    display: flex;
-    overflow-x: overlay;
-    border-radius: 8px;
-    -webkit-border-radius: 8px;
-    -moz-border-radius: 8px;
-    -ms-border-radius: 8px;
-    -o-border-radius: 8px;
-  }
-
-  .modal-body img {
-    width: auto;
-  }
+.cross-icon {
+  position: sticky;
+  top: -15px;
+  left: 100%;
+  font-size: 30px;
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  color: #cc0000;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
+  border-top-right-radius: 0;
 }
