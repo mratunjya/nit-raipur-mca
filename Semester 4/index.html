@@ -13,6 +13,12 @@
       src="https://kit.fontawesome.com/952d5d526e.js"
       crossorigin="anonymous"
     ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/pdfobject/2.2.8/pdfobject.min.js"
+      integrity="sha512-MoP2OErV7Mtk4VL893VYBFq8yJHWQtqJxTyIAsCVKzILrvHyKQpAwJf9noILczN6psvXUxTr19T5h+ndywCoVw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <link rel="stylesheet" href="../css/margin.css" />
     <link rel="stylesheet" href="../css/width.css" />
     <link rel="stylesheet" href="../css/master.css" />
@@ -41,6 +47,20 @@
           </h2>
           <ol class="m-l-40">
             <li
+              data-src="MCA IV Sem Syllabus"
+              data-ext="pdf"
+              class="open-modal pointer"
+            >
+              MCA IV Sem Syllabus
+            </li>
+            <li
+              data-src="Time Table Sem 4 2022"
+              data-ext="jpg"
+              class="open-modal pointer"
+            >
+              Time Table
+            </li>
+            <li
               data-src="Academic Calender MCA 4th Sem 2023"
               data-ext="png"
               class="open-modal pointer"
@@ -55,7 +75,8 @@
     <div class="modal-container justify-content-center align-items-center">
       <div class="modal-body animate__zoomIn animate__animated">
         <i class="fa-solid fa-circle-xmark cross-icon"></i>
-        <img src="" />
+        <img />
+        <div id="pdf-viewer"></div>
       </div>
     </div>
 
@@ -76,7 +97,6 @@
     </footer>
 
     <script src="JavaScript/open-modal.js"></script>
-    <script src="JavaScript/syllabus.js"></script>
     <script src="../JavaScript/script.js"></script>
   </body>
 </html>

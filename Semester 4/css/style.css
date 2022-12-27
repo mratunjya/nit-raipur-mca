@@ -178,8 +178,7 @@ body {
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
   overflow: auto;
-  height: fit-content;
-  max-height: 93vh;
+  height: 93vh;
 }
 
 .modal-body::-webkit-scrollbar {
@@ -225,4 +224,14 @@ iframe {
   justify-content: center;
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
   border-top-right-radius: 0;
+}
+
+#pdf-viewer {
+  height: calc(100% - 50px);
+  overflow: hidden;
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
 }
