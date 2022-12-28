@@ -18,6 +18,7 @@ allClicks = document.querySelectorAll(".open-modal");
 const modalContainer = document.querySelector(".modal-container");
 const modalContainerImg = document.querySelector(".modal-body img");
 const modalContainerPdf = document.querySelector("#pdf-viewer");
+const modalContainerPdfIframe = document.querySelector("#pdf-viewer iframe");
 
 allClicks.forEach(function (item) {
   item.addEventListener("click", function () {
@@ -26,10 +27,7 @@ allClicks.forEach(function (item) {
     if (extension === "pdf") {
       modalContainerImg.style.display = "none";
       modalContainerPdf.style.display = "block";
-      PDFObject.embed(
-        `${extension}/${this.dataset.src}.${this.dataset.ext}#scrollbar=0&toolbar=1`,
-        "#pdf-viewer"
-      );
+      modalContainerPdfIframe.src = this.dataset.src;
     } else if (extension === "jpg" || extension === "png") {
       modalContainerImg.style.display = "block";
       modalContainerPdf.style.display = "none";
