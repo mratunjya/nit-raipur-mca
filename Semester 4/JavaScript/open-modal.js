@@ -21,9 +21,16 @@ const modalContainerPdf = document.querySelector("#pdf-viewer");
 const modalContainerPdfIframe = document.querySelector("#pdf-viewer iframe");
 
 allClicks.forEach(function (item) {
+  item.addEventListener("contextmenu", function (e) {
+    e.preventDefault();
+    const extension = this.dataset.ext;
+    if (extension === "pdf") {
+      window.open(this.dataset.src, "_blank");
+    }
+  });
+
   item.addEventListener("click", function () {
     const extension = this.dataset.ext;
-    console.log(extension);
     if (extension === "pdf") {
       modalContainerImg.style.display = "none";
       modalContainerPdf.style.display = "block";
