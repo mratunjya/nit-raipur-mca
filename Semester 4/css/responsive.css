@@ -14,6 +14,11 @@
     -o-border-radius: 8px;
   }
 
+  .modal-body img {
+    height: 100%;
+    width: auto;
+  }
+
   .cross-icon {
     top: -8px;
     font-size: 15px;
