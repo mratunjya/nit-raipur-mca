@@ -34,11 +34,16 @@ allClicks.forEach(function (item) {
     if (extension === "pdf") {
       modalContainerImg.style.display = "none";
       modalContainerPdf.style.display = "block";
-      modalContainerPdfIframe.src = this.dataset.src;
+      if (modalContainerPdfIframe.src !== this.dataset.src)
+        modalContainerPdfIframe.src = this.dataset.src;
     } else if (extension === "jpg" || extension === "png") {
       modalContainerImg.style.display = "block";
       modalContainerPdf.style.display = "none";
-      modalContainerImg.src = `${extension}/${this.dataset.src}.${this.dataset.ext}`;
+      if (
+        modalContainerImg.src !==
+        `${extension}/${this.dataset.src}.${this.dataset.ext}`
+      )
+        modalContainerImg.src = `${extension}/${this.dataset.src}.${this.dataset.ext}`;
     }
     scrollModalTop();
     windowScrollTop();
