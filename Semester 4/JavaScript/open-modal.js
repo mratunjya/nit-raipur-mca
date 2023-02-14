@@ -25,14 +25,9 @@ const showModal = () => {
   noScroll();
 };
 
-const hideAllIframeAndImages = () => {
-  const allIframe = document.querySelectorAll("#pdf-viewer iframe");
-  allIframe.forEach(function (item) {
-    item.style.display = "none";
-  });
-
-  const allImages = document.querySelectorAll(".modal-body img");
-  allImages.forEach(function (item) {
+const hideAllElements = (selector) => {
+  const allElements = document.querySelectorAll(selector);
+  allElements.forEach(function (item) {
     item.style.display = "none";
   });
 };
@@ -64,9 +59,8 @@ allClicks.forEach(function (item) {
   item.addEventListener("click", function () {
     const extension = this.dataset.ext;
     const id = this.dataset.id + extension;
-
     showModal();
-    hideAllIframeAndImages();
+    hideAllElements("#pdf-viewer iframe, .modal-body img");
 
     if (extension === "pdf") {
       pdfViewer.style.display = "block";
@@ -85,7 +79,7 @@ allClicks.forEach(function (item) {
     } else if (extension === "jpg" || extension === "png") {
       pdfViewer.style.display = "none";
       showModal();
-      hideAllIframeAndImages();
+      hideAllElements("#pdf-viewer iframe, .modal-body img");
 
       const getImageById = document.getElementById(id);
       if (getImageById) {
