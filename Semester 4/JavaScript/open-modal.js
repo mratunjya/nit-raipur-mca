@@ -1,3 +1,5 @@
+"use strict";
+
 const noScroll = () => {
   document.body.style.overflow = "hidden";
 };
@@ -14,11 +16,36 @@ const windowScrollTop = () => {
   window.scrollTo(0, 0);
 };
 
-allClicks = document.querySelectorAll(".open-modal");
+const allClicks = document.querySelectorAll(".open-modal");
 const modalContainer = document.querySelector(".modal-container");
-const modalContainerImg = document.querySelector(".modal-body img");
-const modalContainerPdf = document.querySelector("#pdf-viewer");
-const modalContainerPdfIframe = document.querySelector("#pdf-viewer iframe");
+const pdfViewer = document.querySelector("#pdf-viewer");
+
+const showModal = () => {
+  modalContainer.classList.add("is-flex");
+  noScroll();
+};
+
+const hideAllElements = (selector) => {
+  const allElements = document.querySelectorAll(selector);
+  allElements.forEach(function (item) {
+    item.style.display = "none";
+  });
+};
+
+const closeModal = () => {
+  modalContainer.classList.remove("is-flex");
+  scroll();
+};
+
+const closeBtn = document.querySelector(".cross-icon");
+closeBtn.addEventListener("click", closeModal);
+
+const modalBody = document.querySelector(".modal-body");
+modalBody.addEventListener("click", function (e) {
+  e.stopPropagation();
+});
+
+modalContainer.addEventListener("click", closeModal);
 
 allClicks.forEach(function (item) {
   item.addEventListener("contextmenu", function (e) {
@@ -31,32 +58,43 @@ allClicks.forEach(function (item) {
 
   item.addEventListener("click", function () {
     const extension = this.dataset.ext;
+    const id = this.dataset.id + extension;
+    showModal();
+    hideAllElements("#pdf-viewer iframe, .modal-body img");
+
     if (extension === "pdf") {
-      modalContainerImg.style.display = "none";
-      modalContainerPdf.style.display = "block";
-      if (modalContainerPdfIframe.src !== this.dataset.src)
-        modalContainerPdfIframe.src = this.dataset.src;
+      pdfViewer.style.display = "block";
+      const getIframeById = document.getElementById(id);
+      if (getIframeById) {
+        getIframeById.style.display = "block";
+      } else {
+        const iframe = document.createElement("iframe");
+        iframe.setAttribute("id", id);
+        iframe.src = this.dataset.src;
+        iframe.style.width = "100%";
+        iframe.style.height = "100%";
+        iframe.style.border = "none";
+        pdfViewer.appendChild(iframe);
+      }
     } else if (extension === "jpg" || extension === "png") {
-      modalContainerImg.style.display = "block";
-      modalContainerPdf.style.display = "none";
-      if (
-        modalContainerImg.src !==
-        `${extension}/${this.dataset.src}.${this.dataset.ext}`
-      )
-        modalContainerImg.src = `${extension}/${this.dataset.src}.${this.dataset.ext}`;
+      pdfViewer.style.display = "none";
+      showModal();
+      hideAllElements("#pdf-viewer iframe, .modal-body img");
+
+      const getImageById = document.getElementById(id);
+      if (getImageById) {
+        getImageById.style.display = "block";
+      } else {
+        const image = document.createElement("img");
+        image.setAttribute("id", id);
+        image.src = `${extension}/${this.dataset.src}.${extension}`;
+        modalBody.appendChild(image);
+      }
+      scrollModalTop();
+      windowScrollTop();
     }
-    scrollModalTop();
-    windowScrollTop();
-    noScroll();
-    modalContainer.classList.toggle("is-flex");
   });
-});
 
-modalContainer.addEventListener("click", function () {
-  this.classList.toggle("is-flex");
-  scroll();
-});
-
-modalContainerImg.addEventListener("click", function (e) {
-  e.stopPropagation();
+  item.click();
+  closeBtn.click();
 });
