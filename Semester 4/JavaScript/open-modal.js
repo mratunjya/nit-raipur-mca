@@ -122,6 +122,10 @@ window.addEventListener("load", () => {
     item.click();
   });
   closeModal();
+
+  setTimeout(() => {
+    console.clear();
+  }, 1);
 });
 
 // Double-clicking on the modal body will close the modal

@@ -1,4 +1,8 @@
 @media only screen and (max-width: 768px) {
+  .content-card-wrapper {
+    width: 100%;
+  }
+
   .modal-container {
     padding: 15px 10px;
   }
