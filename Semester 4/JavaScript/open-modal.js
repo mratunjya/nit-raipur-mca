@@ -45,6 +45,11 @@ const hideAllElements = (selector) => {
 const closeModal = () => {
   modalContainer.classList.remove("is-flex");
   scroll();
+
+  // Exit fullscreen mode
+  if (document.fullscreenElement) {
+    document.exitFullscreen();
+  }
 };
 
 // Add event listeners to the close button, modal body, and modal container
@@ -69,6 +74,8 @@ allClicks.forEach((item) => {
 
   // Show the modal and hide all other elements when the item is clicked
   item.addEventListener("click", () => {
+    // Enter fullscreen mode
+    modalContainer.requestFullscreen();
     const extension = item.dataset.ext;
     const id = item.dataset.id + extension;
     showModal();
