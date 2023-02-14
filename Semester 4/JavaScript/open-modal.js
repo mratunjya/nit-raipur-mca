@@ -76,6 +76,8 @@ allClicks.forEach((item) => {
   item.addEventListener("click", () => {
     // Enter fullscreen mode
     modalContainer.requestFullscreen();
+
+    // Get the extension and id of the element that triggered the modal
     const extension = item.dataset.ext;
     const id = item.dataset.id + extension;
     showModal();
@@ -121,3 +123,6 @@ window.addEventListener("load", () => {
   });
   closeModal();
 });
+
+// Double-clicking on the modal body will close the modal
+modalBody.addEventListener("dblclick", closeModal);
