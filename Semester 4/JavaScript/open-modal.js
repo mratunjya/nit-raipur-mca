@@ -96,7 +96,11 @@ allClicks.forEach((item) => {
         iframe.style.border = "none";
         pdfViewer.appendChild(iframe);
       }
-    } else if (extension === "jpg" || extension === "png") {
+    } else if (
+      extension === "jpg" ||
+      extension === "jpeg" ||
+      extension === "png"
+    ) {
       pdfViewer.style.display = "none";
       showModal();
       hideAllElements("#pdf-viewer iframe, .modal-body img");
