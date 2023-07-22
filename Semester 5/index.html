@@ -1,0 +1,98 @@
+<html lang="en">
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="../JavaScript/loader.js"></script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/952d5d526e.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="../css/margin.css" />
+    <link rel="stylesheet" href="../css/width.css" />
+    <link rel="stylesheet" href="../css/master.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <title>Semester V: NIT Raipur MCA 2021 - 2024</title>
+  </head>
+
+  <body>
+    <div class="loader"></div>
+    <header class="header">
+      <h1 class="text-center">
+        <a href="../" class="no-deco"
+          >NIT Raipur MCA 2021 - 2024 &nbsp;&nbsp;Semester V</a
+        >
+      </h1>
+    </header>
+
+    <section class="center">
+      <div class="flex space-between flex-wrap w-95-cent center">
+        <div class="content-card-wrapper m-t-40" id="content-card-wrapper">
+          <h2 class="h2-card">
+            <a href="#content-card-wrapper" onclick="scroll_minus70()"
+              >Notice Board & Important Documents</a
+            >
+          </h2>
+          <ol class="m-l-40">
+            <li
+              data-src="https://external-pdf-viewer.netlify.app/MCA/Sem-5/Syllabus"
+              data-ext="pdf"
+              data-id="Syllabus"
+              class="open-modal pointer"
+            >
+              MCA V Sem Syllabus
+            </li>
+            <li
+              data-src="Time Table Sem 5 2023"
+              data-ext="webp"
+              data-id="Time-Table"
+              class="open-modal pointer"
+            >
+              Time Table
+            </li>
+            <li
+              data-src="Academic Calender MCA 5th Sem 2023"
+              data-ext="webp"
+              data-id="Academic-Calender"
+              class="open-modal pointer"
+            >
+              Academic Calender
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <div class="modal-container justify-content-center align-items-center">
+      <div class="modal-body animate__zoomIn animate__animated">
+        <i class="fa-solid fa-circle-xmark cross-icon"></i>
+        <div id="pdf-viewer"></div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <p>
+        <a
+          href="https://www.linkedin.com/in/mratunjya/"
+          target="_blank"
+          style="
+            text-decoration: none;
+            font-family: 'Major Mono Display', monospace;
+          "
+          >Made with <img src="../svg/heart-svg.svg" width="2.5%" /> And
+          <img src="../svg/code-svg.svg" width="3%" /> by Mratunjya
+          Shankhdhar</a
+        >
+      </p>
+    </footer>
+
+    <script src="JavaScript/open-modal.js"></script>
+    <script src="../JavaScript/script.js"></script>
+  </body>
+</html>
